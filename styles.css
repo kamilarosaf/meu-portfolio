@@ -136,3 +136,10 @@ figcaption {
     font-size: 14px;
     color: #333;
 }
+/* Adicionando estilo para o nome */
+header h2 {
+    font-size: 2rem;
+    color: #007bff;  /* Escolha a cor que preferir */
+    font-weight: bold;
+    margin-top: 10px;
+}
