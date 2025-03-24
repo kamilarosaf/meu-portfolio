@@ -1,34 +1,115 @@
 body {
-    background-color: #f9f9f9; /* Cor de fundo */
-    color: #333; /* Cor do texto */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-header, footer {
-    background-color: #007bff; /* Azul para cabeçalho e rodapé */
-    color: white; /* Texto branco */
+header {
+    background-color: #007bff;  /* Cor mais vibrante */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;  /* Centraliza os links */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: white; /* Cor dos links de navegação */
+    color: white;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-h1, h2, h3 {
-    color: #007bff; /* Azul para títulos */
+nav ul li a:hover {
+    color: #f4f4f4;  /* Cor de destaque ao passar o mouse */
 }
-header {
-    background: linear-gradient(90deg, #007bff, #0056b3);
-    color: white;
-    padding: 20px;
+
+.hero {
     text-align: center;
+    padding: 50px 20px;
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.highlight {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.highlight a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.highlight a:hover {
+    background-color: #0056b3;
 }
 
 footer {
-    background: linear-gradient(90deg, #0056b3, #007bff);
-    color: white;
-    padding: 10px;
     text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
-html {
-    scroll-behavior: smooth;
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .highlight {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3;  /* Novo fundo ao passar o mouse */
+    color: #f4f4f4;
 }
