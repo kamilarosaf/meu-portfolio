@@ -143,3 +143,34 @@ header h2 {
     font-weight: bold;
     margin-top: 10px;
 }
+.certificates {
+    text-align: center;
+    padding: 20px;
+}
+
+.certificates .certificate {
+    display: inline-block;
+    margin: 10px;
+}
+
+.certificates img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.certificates p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.certificates .view-more {
+    display: block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.certificates .view-more:hover {
+    text-decoration: underline;
+}
