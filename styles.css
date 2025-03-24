@@ -1,17 +1,18 @@
-/* Adicionando estilos para melhorar o design */
 body {
-    font-family: 'Lato', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #f9f9f9; /* Cor de fundo */
+    color: #333; /* Cor do texto */
 }
 
-.project-image {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+header, footer {
+    background-color: #007bff; /* Azul para cabeçalho e rodapé */
+    color: white; /* Texto branco */
 }
 
-.project-image:hover {
-    transform: scale(1.05);
+nav ul li a {
+    color: white; /* Cor dos links de navegação */
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    color: #007bff; /* Azul para títulos */
 }
