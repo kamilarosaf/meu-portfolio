@@ -113,3 +113,26 @@ nav ul li a:hover {
     background-color: #0056b3;  /* Novo fundo ao passar o mouse */
     color: #f4f4f4;
 }
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+}
