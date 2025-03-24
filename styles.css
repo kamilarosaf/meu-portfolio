@@ -174,3 +174,20 @@ header h2 {
 .certificates .view-more:hover {
     text-decoration: underline;
 }
+.certificates {
+    text-align: center;
+    padding: 20px;
+}
+
+.certificate {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+.certificate img {
+    width: 300px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
