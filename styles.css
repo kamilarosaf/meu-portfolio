@@ -16,3 +16,16 @@ nav ul li a {
 h1, h2, h3 {
     color: #007bff; /* Azul para títulos */
 }
+header {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background: linear-gradient(90deg, #0056b3, #007bff);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
