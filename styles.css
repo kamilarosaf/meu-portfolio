@@ -8,161 +8,193 @@
 
 /* Fundo escuro e moderno */
 body {
-    background-color: #0a0a0a;
-    color: #fff;
+    background-color: #0d0d0d;
+    color: #e0e0e0;
     text-align: center;
+    line-height: 1.6;
 }
 
 /* Cabeçalho estilizado */
 header {
-    background: linear-gradient(90deg, #0a0a0a, #1f1f1f);
-    padding: 20px;
-    box-shadow: 0px 2px 10px rgba(0, 255, 255, 0.5);
+    background: linear-gradient(90deg, #0d0d0d, #1a1a1a);
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 15px rgba(0, 255, 255, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    color: cyan;
-    text-shadow: 0px 0px 15px cyan;
+    color: #00ffff;
+    text-shadow: 0px 0px 15px #00ffff;
+    margin-left: 10px;
 }
 
 /* Barra de navegação moderna */
 nav ul {
     list-style: none;
-    padding: 10px;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: cyan;
-    font-size: 1.2rem;
+    color: #00ffff;
+    font-size: 1rem;
     padding: 8px 15px;
     border-radius: 5px;
     transition: all 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: cyan;
-    color: #0a0a0a;
-    box-shadow: 0px 0px 15px cyan;
+    background-color: #00ffff;
+    color: #0d0d0d;
+    box-shadow: 0px 0px 15px #00ffff;
 }
 
-/* Seção de introdução */
+/* Seção de introdução com design aprimorado */
 .hero {
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #111, #1a1a1a);
-    box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.3);
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    box-shadow: 0px 4px 20px rgba(0, 255, 255, 0.4);
+    border-bottom: 2px solid #00ffff;
 }
 
-/* Títulos estilizados */
-h2 {
-    font-size: 2rem;
-    color: cyan;
-    text-shadow: 0px 0px 10px cyan;
+.hero h2 {
+    font-size: 2.5rem;
+    color: #00ffff;
+    text-shadow: 0px 0px 20px #00ffff;
+    margin-bottom: 20px;
 }
 
-/* Estilizando cards (destaques) */
+.hero p {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+}
+
+/* Estilização de cards */
 .highlight {
-    max-width: 800px;
-    margin: 30px auto;
+    max-width: 900px;
+    margin: 40px auto;
     padding: 30px;
-    background: rgba(20, 20, 20, 0.8);
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.3);
+    background: rgba(15, 15, 15, 0.9);
+    border-radius: 15px;
+    box-shadow: 0px 0px 25px rgba(0, 255, 255, 0.4);
+    transition: transform 0.3s;
+}
+
+.highlight:hover {
+    transform: scale(1.02);
 }
 
 .highlight h3 {
-    color: cyan;
-    text-shadow: 0px 0px 5px cyan;
+    color: #00ffff;
+    text-shadow: 0px 0px 10px #00ffff;
+    margin-bottom: 15px;
 }
 
-/* Botões com efeito neon */
+/* Botões aprimorados */
 a.btn-saiba-mais {
     display: inline-block;
-    padding: 12px 20px;
+    padding: 12px 25px;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #0a0a0a;
-    background: cyan;
+    color: #0d0d0d;
+    background: #00ffff;
     text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
 }
 
 a.btn-saiba-mais:hover {
     background-color: transparent;
-    color: cyan;
-    border: 2px solid cyan;
-    box-shadow: 0px 0px 20px cyan;
+    color: #00ffff;
+    border: 2px solid #00ffff;
+    box-shadow: 0px 0px 25px #00ffff;
 }
 
 /* Galeria de imagens */
 .image-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 50px;
 }
 
 .image-gallery img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .image-gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 15px cyan;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 25px #00ffff;
 }
 
-/* Estilos para certificados */
+/* Certificados */
 .certificates {
+    padding: 40px;
     text-align: center;
-    padding: 20px;
+    background: linear-gradient(90deg, #0d0d0d, #1f1f1f);
+    box-shadow: 0px -2px 15px rgba(0, 255, 255, 0.3);
 }
 
 .certificates img {
-    width: 150px;
+    width: 120px;
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s;
+    margin: 10px;
 }
 
 .certificates img:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
 }
 
 /* Rodapé */
 footer {
     margin-top: 50px;
-    background: #111;
-    padding: 15px;
-    font-size: 0.9rem;
-    color: #aaa;
-    box-shadow: 0px -2px 10px rgba(0, 255, 255, 0.3);
+    background: #0d0d0d;
+    padding: 20px;
+    font-size: 1rem;
+    color: #b0b0b0;
+    border-top: 2px solid #00ffff;
+    box-shadow: 0px -2px 20px rgba(0, 255, 255, 0.3);
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
     nav ul {
         flex-direction: column;
         gap: 10px;
     }
 
     .hero {
-        padding: 40px 20px;
+        padding: 60px 15px;
     }
 
     .image-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .highlight {
+        padding: 20px;
     }
 }
