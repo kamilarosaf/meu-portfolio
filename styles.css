@@ -1,81 +1,107 @@
-body {
-    font-family: 'Arial', sans-serif;
+/* Configuração padrão */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
 }
 
-.hero-banner {
-    background: url('images/cloud-computing.jpg') no-repeat center center;
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte moderna e elegante */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, rgba(50, 50, 50, 0.8), rgba(25, 25, 25, 0.8)), 
+                url('images/cloud-computing.jpg') no-repeat center center;
     background-size: cover;
-    padding: 80px 20px;
+    color: #f1f1f1;
     text-align: center;
-    color: white;
+}
+
+/* Hero Banner */
+.hero-banner {
+    padding: 100px 20px;
+    text-align: center;
+    color: #f1f1f1;
+    background: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    border-bottom: 3px solid #00aaff;
 }
 
 .hero-banner h1, .hero-banner h2 {
-    margin: 0;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    text-shadow: 0px 0px 15px #00d9ff;
 }
 
 .hero-banner h2.name {
-    font-size: 2.5rem;
-    color: white; /* Garantindo que o nome "Kamila Rosa" seja branco */
+    font-size: 3rem;
+    color: #00d9ff;
     font-weight: bold;
 }
 
+/* Cabeçalho */
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+    background: rgba(20, 20, 20, 0.9);
+    color: #f1f1f1;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 nav ul li a {
     text-decoration: none;
     font-weight: bold;
-    color: white;
+    color: #00aaff;
     padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #0056b3;
+    background-color: #00aaff;
+    color: #101010;
+    box-shadow: 0px 0px 15px #00aaff;
 }
 
-.nav-button {
-    background-color: #007bff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: white;
-    transition: background-color 0.3s ease;
+/* Botões interativos */
+.button, .nav-button {
+    padding: 12px 25px;
+    background-color: #00aaff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s ease;
 }
 
-.nav-button:hover {
-    background-color: #0056b3;
+.button:hover, .nav-button:hover {
+    background-color: transparent;
+    color: #00aaff;
+    border: 2px solid #00aaff;
+    box-shadow: 0px 0px 25px #00aaff;
 }
 
+/* Seção de Introdução */
 .hero {
     text-align: center;
-    padding: 40px 20px;
-    background-color: #007bff;
-    color: white;
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Transparente */
+    color: #f1f1f1;
+    border-bottom: 3px solid #007bff;
 }
 
 .hero h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    color: #00aaff;
+    text-shadow: 0px 0px 15px #00aaff;
 }
 
 .hero p {
@@ -83,28 +109,20 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-.button {
-    padding: 12px 25px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #0056b3;
-}
-
+/* Destaques e Certificações */
 .featured-project, .certifications {
     text-align: center;
     padding: 40px 20px;
-    background-color: white;
+    background: rgba(255, 255, 255, 0.9); /* Fundo translúcido */
     margin: 30px auto;
-    max-width: 800px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.featured-project:hover, .certifications:hover {
+    transform: scale(1.02);
 }
 
 .featured-project h2, .certifications h2 {
@@ -115,7 +133,7 @@ nav ul li a:hover {
 
 .featured-project p {
     font-size: 1.1rem;
-    color: #555;
+    color: #444;
     line-height: 1.6;
     padding: 0 20px;
 }
@@ -127,16 +145,59 @@ nav ul li a:hover {
 
 .certifications li {
     font-size: 1.2rem;
-    background: #f8f9fa;
+    background: rgba(240, 240, 240, 0.9);
     margin: 10px auto;
     padding: 10px 15px;
-    border-radius: 8px;
+    border-radius: 10px;
     display: inline-block;
 }
 
+/* Rodapé */
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
+    padding: 15px;
+    background-color: rgba(20, 20, 20, 0.8);
+    color: #f1f1f1;
+    border-top: 3px solid #00aaff;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Galeria */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 40px auto;
+}
+
+.image-gallery img {
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-banner h1, .hero-banner h2 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .featured-project, .certifications {
+        margin: 20px auto;
+        padding: 20px;
+    }
 }
