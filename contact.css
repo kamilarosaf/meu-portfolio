@@ -102,3 +102,16 @@ footer {
     border-top: 3px solid #00aaff;
     box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3);
 }
+footer {
+    width: 100%;
+    background-color: rgba(20, 20, 20, 0.8);
+    color: #f1f1f1;
+    text-align: center;
+    padding: 15px;
+    position: fixed; /* Fixa o rodapé na tela */
+    bottom: 0; /* Posiciona na parte inferior */
+    left: 0; /* Garante alinhamento à esquerda */
+    z-index: 1000; /* Para que o rodapé fique acima de outros elementos */
+    border-top: 3px solid #00aaff;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3);
+}
