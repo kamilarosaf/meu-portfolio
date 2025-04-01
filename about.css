@@ -1,4 +1,4 @@
-/* Configuração Padrão */
+/* Configuração Padrão */ 
 * {
     margin: 0;
     padding: 0;
@@ -62,6 +62,15 @@ nav ul li a {
 nav ul li a.active,
 nav ul li a:hover {
   color: #00ff7f;
+}
+
+/* Seção sobre */
+.sobre {
+  margin-top: 40px; /* Espaço de 1cm (aproximadamente 40px) do header para a seção sobre */
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Conteúdo */
