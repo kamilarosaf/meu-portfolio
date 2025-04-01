@@ -95,12 +95,12 @@ h2 {
 
 .avatar {
   text-align: center;
-  margin-top: 50px; /* Ajuste o espaçamento conforme necessário */
+  margin-top: 200px; /* Ajuste o espaçamento conforme necessário */
 }
 
 .avatar img {
-  width: 200px;          /* Tamanho desejado para o avatar */
-  height: 150px;         /* Pode ser definido ou deixado automático para manter a proporção */
+  width: 400px;          /* Tamanho desejado para o avatar */
+  height: 400px;         /* Pode ser definido ou deixado automático para manter a proporção */
   border-radius: 50%;    /* Torna a imagem circular */
   border: 3px solid #00aaff; /* Opcional: adiciona uma borda azul */
   display: inline-block;
