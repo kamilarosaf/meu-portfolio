@@ -67,9 +67,10 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
   padding-top: 80px; /* Compensação para o header fixo */
+  padding-left: 10%; /* Centraliza o conteúdo à esquerda */
 }
 
 .content {
@@ -148,7 +149,8 @@ h2 {
 @media (max-width: 1024px) {
   .home {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    padding-left: 5%;
   }
   .content {
     max-width: 100%;
@@ -166,5 +168,6 @@ h2 {
   }
   .home {
     padding-top: 100px; /* Ajuste adicional para evitar sobreposição */
+    padding-left: 5%;
   }
 }
