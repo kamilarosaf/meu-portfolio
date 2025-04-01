@@ -2,45 +2,45 @@
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: hidden; /* Impede rolagem */
     font-family: 'Poppins', sans-serif;
+    background-color: #000; /* Fundo preto */
 }
 
-/* Fundo com as nuvens flutuantes */
+/* Fundo com Nuvens */
 .background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: #000; /* Fundo preto */
     overflow: hidden;
-    z-index: -1; /* Mantém o fundo atrás do conteúdo */
+    z-index: -1; /* Envia fundo para trás */
 }
 
-/* Estilo das nuvens */
+/* Nuvens Estilizadas */
 .nuvem {
     position: absolute;
-    width: 50px;
-    height: 30px;
-    background: linear-gradient(to bottom, #ffffff, #cce7ff);
-    border: 2px solid #00aaff;
+    width: 60px;
+    height: 40px;
+    background: #fff;
+    border: 2px solid #00aaff; /* Bordas azuis */
     border-radius: 50%;
-    animation: subir 10s linear infinite, flutuar 4s ease-in-out infinite;
-    box-shadow: -15px -10px 0px #ffffff;
+    box-shadow: -20px -10px 0px #fff; /* Adiciona formato de nuvem */
+    animation: flutuar 8s linear infinite, subir 12s linear infinite;
 }
 
-/* Animação para subir */
+/* Animação de Subida */
 @keyframes subir {
     from {
         transform: translateY(100vh);
     }
     to {
-        transform: translateY(-100px);
+        transform: translateY(-200px);
     }
 }
 
-/* Animação para flutuar */
+/* Animação de Flutuação */
 @keyframes flutuar {
     0%, 100% {
         transform: translateX(0);
@@ -50,7 +50,7 @@ body {
     }
 }
 
-/* Posições das nuvens */
+/* Posições Aleatórias */
 .nuvem:nth-child(1) {
     left: 10%;
     animation-delay: 0s;
@@ -58,34 +58,55 @@ body {
 .nuvem:nth-child(2) {
     left: 30%;
     animation-delay: 2s;
-    width: 60px;
-    height: 40px;
+    width: 70px; /* Tamanhos variados */
+    height: 50px;
 }
 .nuvem:nth-child(3) {
     left: 50%;
     animation-delay: 4s;
-    width: 70px;
-    height: 50px;
+    width: 80px;
+    height: 60px;
 }
 .nuvem:nth-child(4) {
     left: 70%;
     animation-delay: 6s;
     width: 55px;
-    height: 35px;
+    height: 45px;
 }
 
-/* Configuração padrão */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Cabeçalho Fixo */
+.header-fixa {
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, rgba(50, 50, 50, 0.8), rgba(25, 25, 25, 0.8)), 
-                url('images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
+.header-fixa nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header-fixa nav ul li a {
+    text-decoration: none;
+    color: #00aaff;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.header-fixa nav ul li a:hover {
+    color: #fff;
+}
+
+/* Seção Sobre */
+.sobre-mim {
+    text-align: center;
+    padding: 60px 20px;
     color: #f1f1f1;
 }
 
