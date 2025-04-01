@@ -113,7 +113,7 @@ h2 {
 
 .avatar {
     position: absolute; /* Posiciona o avatar de forma fixa */
-    right: 0; /* Alinha à direita */
+    right: 5; /* Alinha à direita */
     bottom: 0; /* Começa no rodapé */
     height: 50%; /* Define a altura proporcional */
     width: auto; /* Mantém a largura proporcional à altura */
@@ -123,6 +123,4 @@ h2 {
 .avatar img {
     height: 100%;
     object-fit: cover; /* Mantém a proporção da imagem */
-    border-radius: 50%; /* Deixa circular */
-    border: 5px solid #00ff7f; /* Borda verde */
 }
