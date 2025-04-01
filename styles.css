@@ -5,6 +5,7 @@ body {
     overflow: hidden; /* Impede rolagem */
     font-family: 'Poppins', sans-serif;
     background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto claro */
 }
 
 /* Fundo com Nuvens */
@@ -18,15 +19,11 @@ body {
     z-index: -1; /* Envia fundo para trás */
 }
 
-/* Nuvens Estilizadas */
+/* Nuvens com Emojis */
 .nuvem {
     position: absolute;
-    width: 60px;
-    height: 40px;
-    background: #fff;
-    border: 2px solid #00aaff; /* Bordas azuis */
-    border-radius: 50%;
-    box-shadow: -20px -10px 0px #fff; /* Adiciona formato de nuvem */
+    font-size: 2rem; /* Tamanho do emoji */
+    color: #00aaff; /* Cor da nuvem (borda azul) */
     animation: flutuar 8s linear infinite, subir 12s linear infinite;
 }
 
@@ -36,7 +33,7 @@ body {
         transform: translateY(100vh);
     }
     to {
-        transform: translateY(-200px);
+        transform: translateY(-100px);
     }
 }
 
@@ -58,20 +55,17 @@ body {
 .nuvem:nth-child(2) {
     left: 30%;
     animation-delay: 2s;
-    width: 70px; /* Tamanhos variados */
-    height: 50px;
+    font-size: 2.5rem; /* Variar tamanhos */
 }
 .nuvem:nth-child(3) {
     left: 50%;
     animation-delay: 4s;
-    width: 80px;
-    height: 60px;
+    font-size: 3rem;
 }
 .nuvem:nth-child(4) {
     left: 70%;
     animation-delay: 6s;
-    width: 55px;
-    height: 45px;
+    font-size: 2rem;
 }
 
 /* Cabeçalho Fixo */
