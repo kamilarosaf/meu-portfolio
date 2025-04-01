@@ -5,6 +5,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background: #000; /* Fundo preto */
     color: #fff; /* Texto claro */
+    overflow-x: hidden;
 }
 
 /* Fundo com Nuvens */
@@ -18,7 +19,6 @@ body {
     z-index: -1; /* Envia fundo para trás */
 }
 
-/* Nuvens com Emojis */
 .nuvem {
     position: absolute;
     font-size: 2rem;
@@ -26,7 +26,7 @@ body {
     animation: flutuar 8s linear infinite, subir 12s linear infinite;
 }
 
-/* Animação de Subida */
+/* Animações de Nuvens */
 @keyframes subir {
     from {
         transform: translateY(100vh);
@@ -36,7 +36,6 @@ body {
     }
 }
 
-/* Animação de Flutuação */
 @keyframes flutuar {
     0%, 100% {
         transform: translateX(0);
@@ -46,7 +45,7 @@ body {
     }
 }
 
-/* Distribuição Aleatória das Nuvens */
+/* Distribuição das Nuvens */
 .nuvem:nth-child(1) {
     left: 5%;
     top: 20%;
@@ -77,7 +76,7 @@ body {
 .nuvem:nth-child(5) {
     left: 90%;
     top: 15%;
-    font-size: 2.2rem; /* Tamanho ajustado */
+    font-size: 2.2rem; /* Ajuste de tamanho */
     animation-delay: 8s;
 }
 
@@ -88,7 +87,7 @@ body {
     animation-delay: 10s;
 }
 
-/* Cabeçalho */
+/* Cabeçalho fixo */
 .header-fixa {
     position: sticky;
     top: 0;
@@ -96,6 +95,45 @@ body {
     padding: 15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
     z-index: 1000;
+}
+
+.header-fixa nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header-fixa nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #00aaff;
+    transition: all 0.3s ease;
+}
+
+.header-fixa nav ul li a:hover {
+    color: #fff;
+}
+
+/* Seção Sobre Mim */
+.sobre-mim {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.sobre-mim h1 {
+    color: #00aaff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.sobre-mim p {
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 /* Layout Principal */
@@ -108,7 +146,8 @@ body {
     padding: 60px 20px;
 }
 
-/.layout {
+/* Estilo para cada layout */
+.layout {
     width: 45%;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
