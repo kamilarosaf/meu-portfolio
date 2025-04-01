@@ -1,3 +1,8 @@
+/* Adicionando altura para o espaço do cabeçalho fixo */
+.header-space {
+    height: 80px; /* Ajuste a altura para corresponder à altura do seu cabeçalho */
+}
+
 /* Configuração padrão */
 * {
     margin: 0;
@@ -6,8 +11,8 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif; /* Fonte moderna */
-    background: linear-gradient(135deg, #121212, #232220); /* Cores consistentes com o portfólio */
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #121212, #232220);
     color: #f1f1f1;
     text-align: center;
 }
@@ -18,9 +23,9 @@ header {
   padding: 15px 5%;
   background: #1c1c1c;
   display: flex;
-  flex-direction: column; /* Empilha logo e menu na vertical */
-  align-items: flex-start; /* Alinha os itens à esquerda */
-  position: fixed; /* Fixa o cabeçalho no topo */
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -31,8 +36,8 @@ header {
   font-size: 24px;
   font-weight: bold;
   color: #ffffff;
-  margin-bottom: 5px; /* Espaço entre a logo e o menu */
-  align-self: flex-start; /* Garante que a logo fique no canto esquerdo */
+  margin-bottom: 5px;
+  align-self: flex-start;
 }
 
 nav {
@@ -41,18 +46,18 @@ nav {
 
 nav ul {
   list-style: none;
-  display: flex; /* Alinha os itens do menu horizontalmente */
+  display: flex;
   padding: 0;
   margin: 0;
 }
 
 nav ul li {
-  margin-right: 20px; /* Espaço entre os itens do menu */
+  margin-right: 20px;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #00ff7f; /* Verde brilhante para consistência */
+  color: #00ff7f;
   font-weight: bold;
   padding: 8px 12px;
   transition: color 0.3s;
@@ -66,7 +71,7 @@ nav ul li a:hover {
 /* Seção de conteúdo com fundo transparente */
 .content {
     padding: 40px 20px;
-    background: rgba(0, 0, 0, 0.7); /* Transparência no fundo */
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 12px;
     margin: 30px auto;
     max-width: 900px;
@@ -76,7 +81,7 @@ nav ul li a:hover {
 .content h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #00ff7f; /* Consistência com o estilo do título */
+    color: #00ff7f;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
 
@@ -90,29 +95,7 @@ nav ul li a:hover {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 20px;
-    color: #e0e0e0; /* Texto claro */
-}
-
-/* Botões interativos para links */
-.content a {
-    display: inline-block;
-    padding: 10px 25px;
-    background-color: #00ff7f;
-    color: #000000; /* Texto preto inicialmente */
-    font-weight: bold; /* Negrito no texto */
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    margin: 5px;
-}
-
-.content a:hover {
-    background-color: transparent;
-    color: #ffffff; /* Texto branco no hover */
-    border: 2px solid #00ff7f;
-    box-shadow: 0px 0px 25px #00ff7f;
-    transform: scale(1.05);
+    color: #e0e0e0;
 }
 
 /* Galeria de imagens */
@@ -136,7 +119,7 @@ nav ul li a:hover {
 
 .image-gallery img:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 20px rgba(0, 255, 127, 0.5); /* Efeito com o verde */
+    box-shadow: 0px 0px 20px rgba(0, 255, 127, 0.5);
 }
 
 .image-gallery figcaption {
@@ -149,7 +132,7 @@ nav ul li a:hover {
 footer {
     text-align: center;
     padding: 15px;
-    background-color: #1c1c1c; /* Fundo escuro */
+    background-color: #1c1c1c;
     color: #f1f1f1;
     border-top: 3px solid #00ff7f;
     box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3);
