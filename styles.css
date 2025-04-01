@@ -6,14 +6,14 @@
 }
 
 body {
-    background-color: #121212; /* Fundo escuro para o destaque */
-    color: #ffffff; /* Texto em branco para contraste */
+    background-color: #121212; /* Fundo escuro */
+    color: #ffffff; /* Texto em branco */
 }
 
 header {
     width: 100%;
     padding: 15px 5%;
-    background: #1c1c1c; /* Fundo escuro */
+    background: #1c1c1c;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,10 +52,10 @@ nav ul li a.active, nav ul li a:hover {
 
 .home {
     display: flex;
-    align-items: center;
+    align-items: flex-end; /* Posiciona o conteúdo no final */
     justify-content: space-between;
-    padding: 150px 5%; /* Ajustado para compensar o header fixo */
-    height: 100vh;
+    padding: 150px 5%;
+    height: 100vh; /* Altura da seção */
 }
 
 .content {
@@ -73,7 +73,7 @@ h1 {
 
 h2 {
     font-size: 24px;
-    color: #ffa500; /* Laranja suave */
+    color: #ffa500; /* Laranja */
     margin-bottom: 15px;
 }
 
@@ -81,7 +81,7 @@ h2 {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
-    background: #00ff7f; /* Botão verde */
+    background: #00ff7f;
     color: #121212;
     text-decoration: none;
     border-radius: 5px;
@@ -90,7 +90,7 @@ h2 {
 }
 
 .btn:hover {
-    background: #ffffff; /* Mudança de cor ao passar o mouse */
+    background: #ffffff;
     color: #00ff7f;
 }
 
@@ -112,15 +112,17 @@ h2 {
 }
 
 .avatar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute; /* Posiciona o avatar de forma fixa */
+    right: 0; /* Alinha à direita */
+    bottom: 0; /* Começa no rodapé */
+    height: 50%; /* Define a altura proporcional */
+    width: auto; /* Mantém a largura proporcional à altura */
+    transform: translate(10%, 0); /* Ajusta o posicionamento */
 }
 
 .avatar img {
-    width: 350px; /* Largura do avatar */
-    height: 350px; /* Altura */
-    object-fit: cover;
-    border-radius: 50%; /* Circular */
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção da imagem */
+    border-radius: 50%; /* Deixa circular */
     border: 5px solid #00ff7f; /* Borda verde */
 }
