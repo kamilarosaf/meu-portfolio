@@ -117,7 +117,7 @@ h2 {
     position: absolute; /* Posiciona o avatar */
     right: 3cm; /* Afastamento de 3 cm da borda direita */
     bottom: 0; /* Começa do rodapé */
-    height: 50%; /* Define a altura proporcional */
+    height: 70%; /* Define a altura proporcional */
     width: auto; /* Mantém a largura proporcional */
 }
 
