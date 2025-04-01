@@ -15,15 +15,13 @@ body {
 }
 
 header {
-  width: 250px;
-  height: 100vh;
-  padding: 15px;
+  width: 100%;
+  padding: 15px 5%;
   background: #1c1c1c;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-start; /* Alinha os itens à esquerda */
   align-items: center;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
   left: 0;
@@ -34,23 +32,21 @@ header {
   font-size: 24px;
   font-weight: bold;
   color: #ffffff;
-  margin-bottom: 20px;
+  margin-right: auto; /* Mantém a logo à esquerda */
 }
 
 nav {
-  width: 100%;
+  width: auto;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 0;
 }
 
 nav ul li {
-  margin: 10px 0;
+  margin: 0 10px;
 }
 
 nav ul li a {
@@ -73,16 +69,18 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding-left: 280px; /* Compensação para o header fixo */
+  padding-top: 80px; /* Compensação para o header fixo */
 }
 
 .content {
   max-width: 50%;
+  text-align: left;
 }
 
 h1 {
   font-size: 40px;
   margin-bottom: 10px;
+  text-align: left;
 }
 
 .name {
@@ -93,6 +91,7 @@ h2 {
   font-size: 24px;
   color: #ffa500;
   margin-bottom: 15px;
+  text-align: left;
 }
 
 .btn {
@@ -150,10 +149,10 @@ h2 {
   .home {
     flex-direction: column;
     text-align: center;
-    padding-left: 280px;
   }
   .content {
     max-width: 100%;
+    text-align: center;
   }
   .avatar {
     max-width: 60%;
@@ -163,11 +162,9 @@ h2 {
 
 @media (max-width: 768px) {
   header {
-    width: 200px;
-    padding: 10px;
+    padding: 10px 3%;
   }
-  
   .home {
-    padding-left: 220px; /* Ajuste adicional para evitar sobreposição */
+    padding-top: 100px; /* Ajuste adicional para evitar sobreposição */
   }
 }
