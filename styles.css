@@ -33,6 +33,7 @@ header {
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 5px; /* Espaço entre a logo e o menu */
+  align-self: flex-start; /* Garante que a logo fique no canto esquerdo */
 }
 
 nav {
@@ -62,7 +63,6 @@ nav ul li a.active,
 nav ul li a:hover {
   color: #00ff7f;
 }
-
 
 /* Seção Home e Conteúdo */
 .home {
