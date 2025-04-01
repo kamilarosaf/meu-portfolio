@@ -11,7 +11,7 @@ body {
   height: 100%;
   background-color: #232220;
   color: #ffffff;
-  overflow-x: hidden;
+  overflow: hidden; /* Remove rolagem */
 }
 
 header {
@@ -65,12 +65,10 @@ nav ul li a:hover {
 /* Seção Home e Conteúdo */
 .home {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-  padding-top: 80px; /* Compensação para o header fixo */
-  padding-left: 10%; /* Centraliza o conteúdo à esquerda */
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 0 10%;
 }
 
 .content {
@@ -134,7 +132,6 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto;
   max-width: 40%;
 }
 
@@ -150,7 +147,7 @@ h2 {
   .home {
     flex-direction: column;
     align-items: center;
-    padding-left: 5%;
+    padding: 0 5%;
   }
   .content {
     max-width: 100%;
@@ -167,7 +164,8 @@ h2 {
     padding: 10px 3%;
   }
   .home {
-    padding-top: 100px; /* Ajuste adicional para evitar sobreposição */
-    padding-left: 5%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
