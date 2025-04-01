@@ -7,7 +7,44 @@ body {
     color: #fff; /* Texto claro */
 }
 
-/* Cabeçalho fixo */
+/* Fundo com Nuvens */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.nuvem {
+    position: absolute;
+    font-size: 2rem;
+    color: #00aaff;
+    animation: flutuar 8s linear infinite, subir 12s linear infinite;
+}
+
+/* Animações */
+@keyframes subir {
+    from {
+        transform: translateY(100vh);
+    }
+    to {
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+}
+
+/* Cabeçalho */
 .header-fixa {
     position: sticky;
     top: 0;
