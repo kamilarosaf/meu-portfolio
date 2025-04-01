@@ -124,6 +124,4 @@ h2 {
 .avatar img {
     height: 100%;
     object-fit: cover; /* Ajusta a proporção da imagem */
-    border-radius: 50%; /* Deixa circular */
-    border: 5px solid #00ff7f; /* Borda verde */
 }
