@@ -102,7 +102,6 @@ h2 {
 .avatar img {
   width: 350px;        /* Ajuste o tamanho conforme preferir */
   height: 350px;       /* Mantenha a proporção ou defina um valor */
-  border-radius: 50%;  /* Torna a imagem circular */
   border: none;        /* Remove qualquer borda */
 }
 
