@@ -122,7 +122,7 @@ h2 {
   position: absolute;       /* Permite posicionar de forma fixa */
   right: 3cm;               /* 3 cm de distância da borda direita */
   bottom: 0;                /* Inicia exatamente no rodapé */
-  height: 70%;              /* Você pode ajustar esse valor para aumentar/diminuir o avatar */
+  height: 70%;              /* Ajuste conforme desejado */
   width: auto;              /* Largura proporcional */
 }
 
@@ -141,23 +141,23 @@ h2 {
     overflow-y: auto;
   }
   
-  /* Altera o layout para coluna, empilhando o conteúdo */
+  /* Compensa o cabeçalho fixo para não sobrepor o conteúdo */
   .home {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 80px; /* Espaço extra para evitar que o header encoste no conteúdo */
     height: auto;
     padding: 20px;
   }
   
-  /* Ajusta o tamanho e centraliza o texto */
   .content {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
   }
   
-  /* Remove posicionamento absoluto para o avatar e reorienta-o */
+  /* Reposiciona o avatar para o fluxo normal, evitando sobreposição */
   .avatar {
     position: relative;
     right: 0;
@@ -165,11 +165,15 @@ h2 {
     height: auto;
     width: 80%;
     max-width: 300px; /* Tamanho máximo do avatar */
-    margin: 0 auto 20px; /* Espaço acima ou abaixo se necessário */
+    margin: 0 auto 20px; /* Espaço inferior para separação */
   }
   
   .avatar img {
     width: 100%;
+    height: auto;
+  }
+}
+
     height: auto;
   }
 }
