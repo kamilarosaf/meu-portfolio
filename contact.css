@@ -1,4 +1,4 @@
-/* Configuração Padrão */
+/* Configuração padrão */
 * {
     margin: 0;
     padding: 0;
@@ -7,64 +7,52 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #121212, #232220),
-                url('images/contact-background.jpg') no-repeat center center fixed; /* Fundo atualizado */
-    background-size: cover;
+    background: linear-gradient(135deg, #121212, #232220);
     color: #f1f1f1;
     text-align: center;
-    padding: 20px;
 }
 
 /* Cabeçalho */
-header {
-    background: #1c1c1c;
-    color: #f1f1f1;
-    padding: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 header {
   width: 100%;
   padding: 15px 5%;
   background: #1c1c1c;
   display: flex;
-  flex-direction: column; /* Modificado para empilhar logo e menu verticalmente */
+  flex-direction: column;
   align-items: flex-start;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  position: fixed; /* Fixa o cabeçalho no topo */
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
   color: #ffffff;
-  margin-bottom: 10px; /* Espaço entre o logo e o menu */
+  margin-bottom: 5px;
+  align-self: flex-start;
 }
 
 nav {
-  width: auto;
+  width: 100%;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap; /* Permite quebrar linhas para responsividade */
-  gap: 10px; /* Espaço entre itens do menu */
   padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #ffffff;
+  color: #00ff7f;
   font-weight: bold;
   padding: 8px 12px;
   transition: color 0.3s;
@@ -75,42 +63,48 @@ nav ul li a:hover {
   color: #00ff7f;
 }
 
-
-/* Seção Principal */
+/* Correção da sobreposição e do espaço para o cabeçalho fixo */
 main {
-    max-width: 900px;
-    margin: 40px auto;
-    background: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
-    padding: 30px;
+    padding-top: 110px; /* Ajuste para evitar sobreposição do cabeçalho */
+}
+
+/* Seção de contato */
+.contact-info {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 12px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
-    text-align: left;
+    margin: 30px auto;
+    max-width: 900px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-main h2 {
+.contact-info h2 {
     font-size: 2rem;
-    color: #00ff7f;
-    text-shadow: 0px 0px 10px #00ff7f;
     margin-bottom: 20px;
-    text-align: center;
+    color: #00ff7f;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
 
-main p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+.contact-item {
     margin-bottom: 15px;
-    color: #f1f1f1;
+    font-size: 1.1rem;
+    color: #e0e0e0;
 }
 
-main p a {
-    color: #00ff7f; /* Verde para links */
+.contact-item i {
+    margin-right: 10px;
+    color: #00ff7f;
+}
+
+/* Links de contato */
+.contact-item a {
+    color: #00ff7f;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
 }
 
-main p a:hover {
-    color: #ffffff; /* Texto branco no hover */
+.contact-item a:hover {
+    color: #ffffff;
     text-decoration: underline;
 }
 
@@ -118,36 +112,16 @@ main p a:hover {
 footer {
     text-align: center;
     padding: 15px;
-    background-color: #1c1c1c; /* Fundo escuro */
+    background-color: #1c1c1c;
     color: #f1f1f1;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
     border-top: 3px solid #00ff7f;
     box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Botões interativos */
-nav ul li a, main p a {
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover, main p a:hover {
-    color: #ffffff; /* Branco no hover */
-}
-
 /* Responsividade */
 @media (max-width: 768px) {
-    main {
+    .contact-info {
         margin: 20px auto;
         padding: 20px;
-    }
-
-    nav ul {
-        flex-wrap: wrap; /* Permite quebra de linha no menu */
-        justify-content: center;
     }
 }
