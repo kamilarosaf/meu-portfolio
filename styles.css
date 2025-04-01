@@ -5,9 +5,11 @@
     font-family: 'Arial', sans-serif;
 }
 
-body {
-    background-color: #121212; /* Fundo escuro */
-    color: #ffffff; /* Texto em branco */
+html, body {
+    height: 100%; /* Garante que o corpo ocupe toda a altura */
+    overflow: hidden; /* Remove as barras de rolagem */
+    background-color: #232220; /* Cor de fundo conforme solicitado */
+    color: #ffffff; /* Texto em branco para contraste */
 }
 
 header {
@@ -52,10 +54,10 @@ nav ul li a.active, nav ul li a:hover {
 
 .home {
     display: flex;
-    align-items: flex-end; /* Posiciona o conteúdo no final */
     justify-content: space-between;
-    padding: 150px 5%;
-    height: 100vh; /* Altura da seção */
+    align-items: center;
+    height: 100%; /* Ocupa toda a altura da página */
+    padding: 5%;
 }
 
 .content {
@@ -112,15 +114,16 @@ h2 {
 }
 
 .avatar {
-    position: absolute; /* Posiciona o avatar de forma fixa */
-    right: 0; /* Alinha à direita */
-    bottom: 0; /* Começa no rodapé */
-    height: 50%; /* Define a altura proporcional */
+    position: absolute; /* Posiciona o avatar */
+    right: 3cm; /* Afastamento de 3 cm da borda direita */
+    bottom: 3cm; /* Afastamento de 3 cm da borda inferior */
+    height: 50%; /* Ocupa metade da altura da página */
     width: auto; /* Mantém a largura proporcional à altura */
-    transform: translate(10%, 0); /* Ajusta o posicionamento */
 }
 
 .avatar img {
     height: 100%;
-    object-fit: cover; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Ajusta a proporção da imagem */
+    border-radius: 50%; /* Deixa circular */
+    border: 5px solid #00ff7f; /* Borda verde */
 }
