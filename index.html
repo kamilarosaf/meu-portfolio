@@ -3,79 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Portfólio</title>
+  <title>Kamila Rosa - Portfólio</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://kit.fontawesome.com/25ea32a90d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Fundo Interativo com Nuvens -->
-  <div class="background">
-    <div class="nuvem">☁</div>
-    <div class="nuvem">☁</div>
-    <div class="nuvem">☁</div>
-    <div class="nuvem">☁</div>
-    <div class="nuvem">☁</div>
-    <div class="nuvem">☁</div>
-  </div>
-
-  <!-- Cabeçalho fixo -->
-  <header class="header-fixa">
+  <!-- Cabeçalho fixo com navegação -->
+  <header>
     <nav>
       <ul>
-        <li><a href="about.html"><i class="fas fa-user"></i> Sobre Mim</a></li>
-        <li><a href="#layouts"><i class="fas fa-project-diagram"></i> Projetos e Certificados</a></li>
-        <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Seção: Sobre Mim -->
-  <section id="sobre" class="sobre-mim">
-    <h1>Sobre Mim</h1>
-    <p>
-      Olá, me chamo Kamila Rosa, estudante de Gestão em TI apaixonada por tecnologia e inovação. Ao longo da minha jornada acadêmica, descobri minha paixão por Engenharia de Software, área na qual pretendo me aprofundar após a conclusão do meu curso. Durante essa trajetória, também tive a oportunidade de conhecer a AWS por meio da Escola da Nuvem, onde me especializei e conquistei a certificação de Cloud Practitioner. Meu objetivo agora é expandir meus conhecimentos e obter novas certificações que estejam alinhadas com minha aspiração de ingressar na carreira de Engenharia de Software.
-  </section>
-
-  <!-- Seção: Layouts de Projetos e Certificados -->
-  <section id="layouts">
-    <!-- Layout: Meus Projetos -->
-    <div class="layout">
-      <h2>Meus Projetos</h2>
-      <div class="item">
-        <h3>Moto Tech</h3>
-        <p>Plataforma para oficinas mecânicas, otimiza gestão de serviços.</p>
-        <button onclick="location.href='./projeto1/index.html'">
-          <i class="fas fa-arrow-right"></i> Ver Mais
-        </button>
+  <!-- Seção Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hi There, I'm Kamila Rosa</h1>
+      <p>I am passionate about Technology & Innovation</p>
+      <a href="about.html" class="btn">About Me</a>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-telegram"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-dev"></i></a>
       </div>
     </div>
-    <!-- Layout: Certificado AWS -->
-    <div class="layout">
-      <h2>Certificação</h2>
-      <div class="item">
-        <h3>AWS Cloud Practitioner</h3>
-        <p>Certificação sobre computação em nuvem pela AWS.</p>
-        <button onclick="location.href='#'">
-          <i class="fas fa-arrow-right"></i> Saiba Mais
-        </button>
-      </div>
-    </div>
-    <!-- Layout: Certificado Python -->
-    <div class="layout">
-      <h2>Certificação</h2>
-      <div class="item">
-        <h3>Python</h3>
-        <p>Certificação em Python.</p>
-        <button onclick="location.href='#'">
-          <i class="fas fa-arrow-right"></i> Saiba Mais
-        </button>
-      </div>
+    <div class="hero-image">
+      <!-- Altere o caminho abaixo para a ilustração escolhida -->
+      <img src="img/illustration.png" alt="Ilustração">
     </div>
   </section>
-
-  <!-- Rodapé -->
-  <footer id="contato">
-    <p>&copy; 2025 Kamila Rosa - Todos os direitos reservados</p>
-  </footer>
-</body>
 </html>
