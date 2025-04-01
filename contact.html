@@ -5,31 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
     <link rel="stylesheet" href="contact.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Para os ícones -->
 </head>
 <body>
     <header>
-        <h1>Entre em Contato</h1>
+        <div class="logo">KR</div>
         <nav>
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="about.html">Sobre</a></li>
                 <li><a href="projects.html">Projetos</a></li>
-                <li><a href="contact.html">Contato</a></li>
+                <li><a href="contact.html" class="active">Contato</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
-        <section>
+        <section class="contact-info">
             <h2>Minhas Informações de Contato</h2>
-            <p>Email: <a href="mailto:kamilarcf@gmail.com">kamilarcf@gmail.com</a></p>
-            <p>WhatsApp: <a href="https://api.whatsapp.com/send?phone=5511949367769">(11) 94936-7769</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/kamila-rosa-15a818309?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Kamila Rosa</a></p>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i> <!-- Ícone do Gmail -->
+                <p>Email: <a href="mailto:kamilarcf@gmail.com">kamilarcf@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-whatsapp"></i> <!-- Ícone do WhatsApp -->
+                <p>WhatsApp: <a href="https://api.whatsapp.com/send?phone=5511949367769" target="_blank">(11) 94936-7769</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-linkedin"></i> <!-- Ícone do LinkedIn -->
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/kamila-rosa-15a818309?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Kamila Rosa</a></p>
+            </div>
         </section>
     </main>
-    
-    <footer>
-        <p>&copy; 2025 Kamila Rosa - Todos os direitos reservados</p>
-    </footer>
 </body>
 </html>
+
