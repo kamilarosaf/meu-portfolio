@@ -1,12 +1,3 @@
-/* Configuração Geral */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #000; /* Fundo preto */
-    color: #fff; /* Texto claro */
-}
-
 /* Fundo com Nuvens */
 .background {
     position: absolute;
@@ -15,33 +6,77 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    z-index: -1;
+    z-index: -1; /* Envia fundo para trás */
 }
 
+/* Nuvens com Emojis */
 .nuvem {
     position: absolute;
     font-size: 2rem;
-    color: #00aaff;
+    color: #00aaff; /* Azul claro para bordas */
     animation: flutuar 8s linear infinite, subir 12s linear infinite;
 }
 
-/* Animações */
+/* Animação de Subida */
 @keyframes subir {
     from {
         transform: translateY(100vh);
     }
     to {
-        transform: translateY(-100px);
+        transform: translateY(-10vh); /* Subindo da parte inferior até sair da tela */
     }
 }
 
+/* Animação de Flutuação */
 @keyframes flutuar {
     0%, 100% {
         transform: translateX(0);
     }
     50% {
-        transform: translateX(20px);
+        transform: translateX(20px); /* Leve oscilação lateral */
     }
+}
+
+/* Distribuição Aleatória das Nuvens */
+.nuvem:nth-child(1) {
+    left: 5%; /* Nuvem à esquerda */
+    top: 20%; /* Começa mais acima */
+    animation-delay: 0s; /* Sem atraso inicial */
+}
+
+.nuvem:nth-child(2) {
+    left: 25%; /* Nuvem ao centro-esquerda */
+    top: 40%; /* Mais baixa */
+    font-size: 3rem; /* Tamanho maior */
+    animation-delay: 2s;
+}
+
+.nuvem:nth-child(3) {
+    left: 50%; /* Nuvem central */
+    top: 30%; /* Posição intermediária */
+    font-size: 2.5rem; /* Tamanho médio */
+    animation-delay: 4s;
+}
+
+.nuvem:nth-child(4) {
+    left: 75%; /* Nuvem ao centro-direita */
+    top: 50%; /* Mais abaixo */
+    font-size: 2rem; /* Tamanho padrão */
+    animation-delay: 6s;
+}
+
+.nuvem:nth-child(5) {
+    left: 90%; /* Nuvem à direita */
+    top: 15%; /* Começa mais acima */
+    font-size: 2.2rem; /* Tamanho ajustado */
+    animation-delay: 8s;
+}
+
+.nuvem:nth-child(6) {
+    left: 15%; /* Nuvem ao centro-esquerda */
+    top: 80%; /* Bem baixa */
+    font-size: 3rem; /* Grande para impacto */
+    animation-delay: 10s;
 }
 
 /* Cabeçalho */
