@@ -1,127 +1,175 @@
+/* Estilos Globais */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-html, body {
-    height: 100%; /* Garante que o corpo ocupe toda a altura */
-    overflow: hidden; /* Remove barras de rolagem */
-    background-color: #232220; /* Cor de fundo */
-    color: #ffffff;
+html,
+body {
+  height: 100%;
+  background-color: #232220; /* Cor de fundo */
+  color: #ffffff;
+  /* Para dispositivos maiores, a página é fixa; porém, permitiremos
+     rolagem em telas menores via media query, se necessário */
+  overflow: hidden;
 }
 
 header {
-    width: 100%;
-    padding: 15px 5%;
-    background: #1c1c1c;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    position: fixed;
-    top: 0;
-    z-index: 100;
+  width: 100%;
+  padding: 15px 5%;
+  background: #1c1c1c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 nav ul li {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    padding: 8px 12px;
-    transition: color 0.3s;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: color 0.3s;
 }
 
-nav ul li a.active, nav ul li a:hover {
-    color: #00ff7f; /* Destaque em verde */
+nav ul li a.active,
+nav ul li a:hover {
+  color: #00ff7f;
 }
 
+/* Seção Home e Conteúdo */
 .home {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%; /* Ocupa toda a altura da tela */
-    padding: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Alinha o conteúdo pelo rodapé */
+  height: 100%; /* Ocupa toda a altura da tela */
+  padding: 5%;
 }
 
 .content {
-    max-width: 50%;
+  max-width: 50%;
 }
 
 h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
+  font-size: 40px;
+  margin-bottom: 10px;
 }
 
 .name {
-    color: #00ff7f; /* Destaque em verde */
+  color: #00ff7f;
 }
 
 h2 {
-    font-size: 24px;
-    color: #ffa500; /* Laranja */
-    margin-bottom: 15px;
+  font-size: 24px;
+  color: #ffa500;
+  margin-bottom: 15px;
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #00ff7f;
-    color: #121212;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #00ff7f;
+  color: #121212;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
 .btn:hover {
-    background: #ffffff;
-    color: #00ff7f;
+  background: #ffffff;
+  color: #00ff7f;
 }
 
 .social-icons {
-    margin-top: 15px;
-    display: flex;
+  margin-top: 15px;
+  display: flex;
 }
 
 .social-icons a {
-    color: #ffffff;
-    font-size: 20px;
-    margin-right: 15px;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: #ffffff;
+  font-size: 20px;
+  margin-right: 15px;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: #00ff7f;
+  color: #00ff7f;
 }
 
+/* Avatar - Layout para telas maiores */
 .avatar {
-    position: absolute; /* Posiciona o avatar */
-    right: 3cm; /* Afastamento de 3 cm da borda direita */
-    bottom: 0; /* Começa do rodapé */
-    height: 70%; /* Define a altura proporcional */
-    width: auto; /* Mantém a largura proporcional */
+  position: absolute;       /* Permite fixar o avatar */
+  right: 3cm;               /* 3 cm do lado direito */
+  bottom: 0;                /* Começa no rodapé */
+  height: 70%;              /* Ajuste conforme desejado */
+  width: auto;              /* Proporcional à altura */
 }
 
 .avatar img {
-    height: 100%;
-    object-fit: cover; /* Ajusta a proporção da imagem */
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #00ff7f;
 }
+
+/* Responsividade: ajuste para telas menores */
+@media (max-width: 768px) {
+  /* Permite scroll caso o conteúdo exceda a tela */
+  html,
+  body {
+    overflow-y: auto;
+  }
+  /* Altera o layout da seção Home para coluna,
+     evitando sobreposição entre avatar e texto */
+  .home {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+  }
+  
+  .content {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Reposiciona o avatar */
+  .avatar {
+    position: relative; /* Remove o posicionamento absoluto */
+    right: 0;
+    bottom: 0;
+    height: auto;
+    width: 60%;
+    max-width: 300px;   /* Tamanho máximo para o avatar */
+    margin: 0 auto;
+  }
+  
+  .avatar img {
+    width: 100%;
+    height: auto;
+  }
