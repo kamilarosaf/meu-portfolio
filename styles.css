@@ -7,8 +7,6 @@
 
 body {
     font-family: 'Poppins', sans-serif; /* Fonte moderna */
-    margin: 0;
-    padding: 0;
     background: linear-gradient(135deg, rgba(50, 50, 50, 0.8), rgba(25, 25, 25, 0.8)), 
                 url('images/cloud-computing.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -16,30 +14,8 @@ body {
     text-align: center;
 }
 
-/* Hero Banner atualizado para fundo apenas com imagem */
-.hero-banner {
-    padding: 80px 20px;
-    text-align: center;
-    background: url('images/cloud-computing.jpg') no-repeat center center fixed; /* Fundo somente com a imagem */
-    background-size: cover;
-    color: #f1f1f1;
-}
-
-.hero-banner h1, .hero-banner h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8); /* Contraste para destacar o texto */
-}
-
-.hero-banner h2.name {
-    font-size: 3rem;
-    color: #ffffff;
-    font-weight: bold;
-}
-
-
-/* Cabeçalho */
-header {
+/* Cabeçalho fixo */
+.header-fixa {
     background: rgba(20, 20, 20, 0.9);
     color: #f1f1f1;
     padding: 15px;
@@ -49,14 +25,14 @@ header {
     z-index: 1000;
 }
 
-nav ul {
+.header-fixa nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 15px;
 }
 
-nav ul li a {
+.header-fixa nav ul li a {
     text-decoration: none;
     font-weight: bold;
     color: #00aaff;
@@ -65,26 +41,60 @@ nav ul li a {
     transition: all 0.3s ease;
 }
 
-nav ul li a:hover {
+.header-fixa nav ul li a:hover {
     background-color: #00aaff;
     color: #101010;
     box-shadow: 0px 0px 15px #00aaff;
 }
 
-/* Botões interativos */
-.button, .nav-button {
+/* Layout dos Projetos */
+.layout-projetos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.projeto {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.projeto:hover {
+    transform: scale(1.05);
+}
+
+.projeto h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.projeto p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+button {
     padding: 12px 25px;
     background-color: #00aaff;
     color: #fff;
-    text-decoration: none;
+    border: none;
+    border-radius: 8px;
     font-size: 1.1rem;
     font-weight: bold;
-    border-radius: 8px;
-    border: none;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.button:hover, .nav-button:hover {
+button:hover {
     background-color: transparent;
     color: #00aaff;
     border: 2px solid #00aaff;
@@ -92,127 +102,14 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
-/* Seção de Introdução */
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: rgba(0, 0, 0, 0.8); /* Transparente */
-    color: #f1f1f1;
-    border-bottom: 3px solid #007bff;
-}
-
-.hero h2 {
-    font-size: 2.2rem;
-    color: #00aaff;
-    text-shadow: 0px 0px 15px #00aaff;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-/* Destaques e Certificações */
-.featured-project, .certifications {
-    text-align: center;
-    padding: 40px 20px;
-    background: rgba(255, 255, 255, 0.9); /* Fundo translúcido */
-    margin: 30px auto;
-    max-width: 900px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-}
-
-.featured-project:hover, .certifications:hover {
-    transform: scale(1.02);
-}
-
-.featured-project h2, .certifications h2 {
-    color: #007bff;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.featured-project p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 40px; /* Espaço adequado para evitar sobreposição */
-}
-
-.certifications ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; /* Espaço entre os itens */
-}
-
-.certifications li {
-    font-size: 1.2rem;
-    color: #333;
-    background: #f8f9fa;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.certifications li img {
-    width: 50px;
-    height: auto;
-}
-
-/* Rodapé */
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: rgba(20, 20, 20, 0.8);
-    color: #f1f1f1;
-    border-top: 3px solid #00aaff;
-    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Galeria */
-.image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin: 40px auto;
-}
-
-.image-gallery img {
-    width: 100%;
-    border-radius: 12px;
-    transition: transform 0.3s, box-shadow 0.3s ease-in-out;
-}
-
-.image-gallery img:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
-}
-
 /* Responsividade */
 @media (max-width: 768px) {
-    .hero-banner h1, .hero-banner h2 {
-        font-size: 2rem;
-    }
-
-    nav ul {
+    .layout-projetos {
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
     }
 
-    .image-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-
-    .featured-project, .certifications {
-        margin: 20px auto;
-        padding: 20px;
+    .projeto {
+        width: 100%;
     }
 }
