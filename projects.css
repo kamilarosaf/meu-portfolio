@@ -14,38 +14,53 @@ body {
 
 /* Cabeçalho */
 header {
-    background: #1c1c1c; /* Fundo escuro */
-    color: #f1f1f1;
-    padding: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  padding: 15px 5%;
+  background: #1c1c1c;
+  display: flex;
+  flex-direction: column; /* Empilha logo e menu na vertical */
+  align-items: flex-start; /* Alinha os itens à esquerda */
+  position: fixed; /* Fixa o cabeçalho no topo */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 5px; /* Espaço entre a logo e o menu */
+  align-self: flex-start; /* Garante que a logo fique no canto esquerdo */
+}
+
+nav {
+  width: 100%;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+  list-style: none;
+  display: flex; /* Alinha os itens do menu horizontalmente */
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin-right: 20px; /* Espaço entre os itens do menu */
 }
 
 nav ul li a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #00ff7f; /* Verde brilhante para consistência */
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+  text-decoration: none;
+  color: #00ff7f; /* Verde brilhante para consistência */
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: color 0.3s;
 }
 
+nav ul li a.active,
 nav ul li a:hover {
-    background-color: #00ff7f;
-    color: #121212;
-    box-shadow: 0px 0px 15px #00ff7f;
+  color: #00ff7f;
 }
 
 /* Seção de conteúdo com fundo transparente */
