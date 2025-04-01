@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>   
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio</title>
@@ -8,9 +8,9 @@
     <script src="https://kit.fontawesome.com/25ea32a90d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Header Fixa e Navegação -->
+    <!-- Cabeçalho fixo -->
     <header class="header-fixa">
-        <nav> 
+        <nav>
             <ul>
                 <li><a href="#sobre"><i class="fas fa-user"></i> Sobre Mim</a></li>
                 <li><a href="#projetos"><i class="fas fa-project-diagram"></i> Projetos</a></li>
@@ -20,10 +20,12 @@
         </nav>
     </header>
 
-    <!-- Seção: Introdução -->
-    <section id="sobre">
-        <h1>Bem-vindo ao Meu Portfólio</h1>
-        <p>Olá, sou Kamila Rosa, uma estudante de Gestão em TI apaixonada por tecnologia e inovação. Ao longo da minha jornada acadêmica, descobri minha paixão por Engenharia de Software, área na qual pretendo me aprofundar após a conclusão do meu curso. Durante essa trajetória, também tive a oportunidade de conhecer a AWS por meio da Escola da Nuvem, onde me especializei e conquistei a certificação de Cloud Practitioner. Meu objetivo agora é expandir meus conhecimentos e obter novas certificações que estejam alinhadas com minha aspiração de ingressar na carreira de Engenharia de Software.</p>
+    <!-- Seção: Sobre Mim -->
+    <section id="sobre" class="sobre-mim">
+        <h1>Sobre Mim</h1>
+        <div class="descricao">
+            <p>Olá, sou Kamila Rosa, uma estudante de Gestão em TI apaixonada por tecnologia e inovação. Ao longo da minha jornada acadêmica, descobri minha paixão por Engenharia de Software, área na qual pretendo me aprofundar após a conclusão do meu curso. Durante essa trajetória, também tive a oportunidade de conhecer a AWS por meio da Escola da Nuvem, onde me especializei e conquistei a certificação de Cloud Practitioner. Meu objetivo agora é expandir meus conhecimentos e obter novas certificações que estejam alinhadas com minha aspiração de ingressar na carreira de Engenharia de Software. </p>
+        </div>
     </section>
 
     <!-- Seção: Projetos -->
@@ -41,15 +43,22 @@
     <!-- Seção: Certificados -->
     <section id="certificados">
         <h2><i class="fas fa-certificate"></i> Minhas Certificações</h2>
-        <ul>
-            <li>📜 AWS Cloud Practitioner</li>
-            <li>🐍 Python Developer</li>
-        </ul>
+        <div class="layout-certificados">
+            <div class="certificado">
+                <h3>AWS Cloud Practitioner</h3>
+                <p>Certificação sobre computação em nuvem pela AWS.</p>
+            </div>
+            <div class="certificado">
+                <h3>Python Developer</h3>
+                <p>Certificação de desenvolvimento em Python.</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Rodapé -->
     <footer id="contato">
         <p>&copy; 2025 Kamila Rosa - Todos os direitos reservados</p>
     </footer>
 </body>
 </html>
+
