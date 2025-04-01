@@ -1,11 +1,11 @@
-/* Estilo Geral */
+/* Configuração Geral */
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Impede rolagem */
     font-family: 'Poppins', sans-serif;
     background-color: #000; /* Fundo preto */
-    color: #fff; /* Texto claro */
+    color: #fff;
+    overflow-x: hidden;
 }
 
 /* Fundo com Nuvens */
@@ -16,18 +16,17 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    z-index: -1; /* Envia fundo para trás */
+    z-index: -1;
 }
 
-/* Nuvens com Emojis */
 .nuvem {
     position: absolute;
-    font-size: 2rem; /* Tamanho do emoji */
-    color: #00aaff; /* Cor da nuvem (borda azul) */
+    font-size: 2rem;
+    color: #00aaff;
     animation: flutuar 8s linear infinite, subir 12s linear infinite;
 }
 
-/* Animação de Subida */
+/* Animações */
 @keyframes subir {
     from {
         transform: translateY(100vh);
@@ -37,7 +36,6 @@ body {
     }
 }
 
-/* Animação de Flutuação */
 @keyframes flutuar {
     0%, 100% {
         transform: translateX(0);
@@ -47,28 +45,7 @@ body {
     }
 }
 
-/* Posições Aleatórias */
-.nuvem:nth-child(1) {
-    left: 10%;
-    animation-delay: 0s;
-}
-.nuvem:nth-child(2) {
-    left: 30%;
-    animation-delay: 2s;
-    font-size: 2.5rem; /* Variar tamanhos */
-}
-.nuvem:nth-child(3) {
-    left: 50%;
-    animation-delay: 4s;
-    font-size: 3rem;
-}
-.nuvem:nth-child(4) {
-    left: 70%;
-    animation-delay: 6s;
-    font-size: 2rem;
-}
-
-/* Cabeçalho Fixo */
+/* Cabeçalho */
 .header-fixa {
     position: sticky;
     top: 0;
@@ -89,7 +66,6 @@ body {
     text-decoration: none;
     color: #00aaff;
     font-weight: bold;
-    padding: 10px;
     transition: color 0.3s;
 }
 
@@ -97,60 +73,47 @@ body {
     color: #fff;
 }
 
-/* Seção Sobre */
-.sobre-mim {
-    text-align: center;
-    padding: 60px 20px;
-    color: #f1f1f1;
-}
-
-/* Cabeçalho fixo */
-.header-fixa {
-    position: sticky;
-    top: 0;
-    background: rgba(20, 20, 20, 0.9);
-    color: #f1f1f1;
-    padding: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-}
-
-.header-fixa nav ul {
-    list-style: none;
+/* Layout Principal */
+#layouts {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.header-fixa nav ul li a {
-    text-decoration: none;
-    color: #00aaff;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.header-fixa nav ul li a:hover {
-    color: #fff;
-}
-
-/* Layout de Projetos e Certificados */
-.layout-projetos, .layout-certificados {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 50px 20px;
     gap: 20px;
-    padding: 40px 20px;
+}
+
+/* Estilo de Cada Layout */
+.layout {
+    width: 45%; /* Cada layout ocupa metade da tela */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.layout h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00aaff;
+}
+
+/* Projetos e Certificados */
+.layout-projetos, .layout-certificados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .projeto, .certificado {
-    background: rgba(255, 255, 255, 0.9); /* Fundo claro para maior visibilidade */
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 15px;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    color: #333; /* Cor escura para texto */
-    width: 250px;
-    height: 300px; /* Dimensões iguais */
-    transition: transform 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
 }
 
 .projeto:hover, .certificado:hover {
@@ -159,49 +122,31 @@ body {
 
 .projeto h3, .certificado h3 {
     color: #007bff;
-    margin-bottom: 10px;
 }
 
-.projeto p, .certificado p {
-    font-size: 1rem;
-}
-
-/* Rodapé fixo */
-footer {
-    background: rgba(20, 20, 20, 0.9);
-    color: #f1f1f1;
-    padding: 15px;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
-}
 button {
-    padding: 12px 25px;
-    background: linear-gradient(135deg, #007bff, #00aaff); /* Gradiente moderno */
+    margin-top: 10px;
+    background: #00aaff;
     color: #fff;
     border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease, transform 0.2s ease;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background: linear-gradient(135deg, #0056b3, #0088cc); /* Alteração no gradiente */
+    background: #007bff;
     color: #fff;
-    transform: translateY(-4px) scale(1.03); /* Elevação sutil */
-    box-shadow: 0px 8px 15px rgba(0, 136, 204, 0.4); /* Sombra moderna */
+    box-shadow: 0px 0px 10px #007bff;
 }
 
-button:active {
-    transform: translateY(0) scale(1); /* Remoção do efeito ao clicar */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-button i {
-    margin-right: 8px; /* Espaço para um ícone, se necessário */
+/* Rodapé */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    border-top: 2px solid #00aaff;
 }
