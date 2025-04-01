@@ -16,14 +16,15 @@ body {
 
 header {
   width: 100%;
-  padding: 10px 5%; /* Reduzi o padding para compactar o header */
-  background: #1c1c1c; /* Fundo escuro */
+  padding: 15px 5%;
+  background: #1c1c1c;
   display: flex;
-  flex-direction: column; /* Organiza o "KR" acima do menu */
-  align-items: center; /* Centraliza logo e menu horizontalmente */
+  justify-content: flex-start; /* Alinha os itens à esquerda */
+  align-items: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   position: fixed; /* Fixa o cabeçalho no topo */
   top: 0;
+  left: 0;
   z-index: 1000;
 }
 
@@ -35,20 +36,23 @@ header {
   text-align: center;
 }
 
+nav {
+  width: auto;
+}
+
 nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap; /* Permite quebrar linhas em dispositivos menores */
-  gap: 10px; /* Espaço entre os links do menu */
-  justify-content: center; /* Centraliza o menu horizontalmente */
+  flex-wrap: wrap; /* Permite quebrar linhas para responsividade */
+  gap: 10px; /* Espaço entre itens do menu */
   padding: 0;
   margin: 0;
 }
 
 nav ul li a {
   text-decoration: none;
+  color: #ffffff;
   font-weight: bold;
-  color: #ffffff; /* Texto branco dos links */
   padding: 8px 12px;
   border-radius: 5px;
   transition: color 0.3s ease, background 0.3s ease;
@@ -56,7 +60,7 @@ nav ul li a {
 
 nav ul li a.active,
 nav ul li a:hover {
-  color: #121212; /* Texto escuro no hover */
+ color: #121212; /* Texto escuro no hover */
   background: #00ff7f; /* Destaque verde no hover */
 }
 
@@ -335,4 +339,43 @@ footer {
     .certificate {
         margin-bottom: 20px;
     }
+}
+nav {
+    display: flex;
+    flex-direction: column; /* Alinha itens em coluna */
+    align-items: center; /* Centraliza logo e menu */
+    background: #1c1c1c; /* Fundo escuro */
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ff7f; /* Verde brilhante */
+    margin-bottom: 10px; /* Espaço entre logo e menu */
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Espaçamento entre links */
+    justify-content: center; /* Centraliza horizontalmente */
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: #121212; /* Texto escuro no hover */
+    background: #00ff7f; /* Fundo verde no hover */
 }
