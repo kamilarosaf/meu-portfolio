@@ -8,10 +8,10 @@
 
 html,
 body {
-  height: 100%; /* O corpo ocupará toda a altura */
-  background-color: #232220; /* Fundo conforme solicitado */
+  height: 100%; /* Ocupa toda a altura */
+  background-color: #232220; /* Fundo na cor especificada */
   color: #ffffff;
-  overflow: hidden; /* Padrão para telas maiores (sem rolagem) */
+  overflow: hidden; /* Sem rolagem para telas maiores */
 }
 
 header {
@@ -119,11 +119,11 @@ h2 {
 
 /* Avatar para telas maiores */
 .avatar {
-  position: absolute;       /* Permite posicionar de forma fixa */
-  right: 3cm;               /* 3 cm de distância da borda direita */
+  position: absolute;       /* Posicionamento fixo */
+  right: 3cm;               /* 3 cm de distância da borda lateral direita */
   bottom: 0;                /* Inicia exatamente no rodapé */
-  height: 70%;              /* Ajuste conforme desejado */
-  width: auto;              /* Largura proporcional */
+  height: 70%;              /* Tamanho relativo (pode ser ajustado) */
+  width: auto;              /* Mantém a proporção da imagem */
 }
 
 .avatar img {
@@ -133,20 +133,32 @@ h2 {
   border: 5px solid #00ff7f;
 }
 
-/* Responsividade: ajuste para telas menores */
+/* Responsividade: ajustes para telas menores */
 @media (max-width: 768px) {
-  /* Permite rolagem vertical se necessário */
+  /* Permite rolagem vertical, se necessário */
   html,
   body {
     overflow-y: auto;
   }
   
-  /* Compensa o cabeçalho fixo para não sobrepor o conteúdo */
+  /* Ajusta o header para liberar mais espaço visual */
+  header {
+    padding: 10px 5%;
+  }
+  
+  /* Centraliza e organiza os itens do menu */
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  /* Empilha o conteúdo verticalmente e compensa o header fixo */
   .home {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 80px; /* Espaço extra para evitar que o header encoste no conteúdo */
+    margin-top: 120px;  /* Espaço para o header */
     height: auto;
     padding: 20px;
   }
@@ -157,23 +169,19 @@ h2 {
     margin-bottom: 20px;
   }
   
-  /* Reposiciona o avatar para o fluxo normal, evitando sobreposição */
+  /* Reposiciona o avatar para evitar sobreposição */
   .avatar {
     position: relative;
     right: 0;
     bottom: 0;
     height: auto;
     width: 80%;
-    max-width: 300px; /* Tamanho máximo do avatar */
-    margin: 0 auto 20px; /* Espaço inferior para separação */
+    max-width: 300px; /* Limita o tamanho máximo */
+    margin: 0 auto 20px; /* Espaço inferior */
   }
   
   .avatar img {
     width: 100%;
-    height: auto;
-  }
-}
-
     height: auto;
   }
 }
