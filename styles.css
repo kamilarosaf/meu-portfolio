@@ -8,12 +8,10 @@
 
 html,
 body {
-  height: 100%;
-  background-color: #232220; /* Cor de fundo */
+  height: 100%; /* O corpo ocupará toda a altura */
+  background-color: #232220; /* Fundo conforme solicitado */
   color: #ffffff;
-  /* Para dispositivos maiores, a página é fixa; porém, permitiremos
-     rolagem em telas menores via media query, se necessário */
-  overflow: hidden;
+  overflow: hidden; /* Padrão para telas maiores (sem rolagem) */
 }
 
 header {
@@ -61,8 +59,8 @@ nav ul li a:hover {
 .home {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end; /* Alinha o conteúdo pelo rodapé */
-  height: 100%; /* Ocupa toda a altura da tela */
+  align-items: center;
+  height: 100%; /* Altura total da página */
   padding: 5%;
 }
 
@@ -119,13 +117,13 @@ h2 {
   color: #00ff7f;
 }
 
-/* Avatar - Layout para telas maiores */
+/* Avatar para telas maiores */
 .avatar {
-  position: absolute;       /* Permite fixar o avatar */
-  right: 3cm;               /* 3 cm do lado direito */
-  bottom: 0;                /* Começa no rodapé */
-  height: 70%;              /* Ajuste conforme desejado */
-  width: auto;              /* Proporcional à altura */
+  position: absolute;       /* Permite posicionar de forma fixa */
+  right: 3cm;               /* 3 cm de distância da borda direita */
+  bottom: 0;                /* Inicia exatamente no rodapé */
+  height: 70%;              /* Você pode ajustar esse valor para aumentar/diminuir o avatar */
+  width: auto;              /* Largura proporcional */
 }
 
 .avatar img {
@@ -137,39 +135,41 @@ h2 {
 
 /* Responsividade: ajuste para telas menores */
 @media (max-width: 768px) {
-  /* Permite scroll caso o conteúdo exceda a tela */
+  /* Permite rolagem vertical se necessário */
   html,
   body {
     overflow-y: auto;
   }
-  /* Altera o layout da seção Home para coluna,
-     evitando sobreposição entre avatar e texto */
+  
+  /* Altera o layout para coluna, empilhando o conteúdo */
   .home {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     height: auto;
     padding: 20px;
   }
   
+  /* Ajusta o tamanho e centraliza o texto */
   .content {
-    max-width: 100%;
+    width: 100%;
     text-align: center;
     margin-bottom: 20px;
   }
   
-  /* Reposiciona o avatar */
+  /* Remove posicionamento absoluto para o avatar e reorienta-o */
   .avatar {
-    position: relative; /* Remove o posicionamento absoluto */
+    position: relative;
     right: 0;
     bottom: 0;
     height: auto;
-    width: 60%;
-    max-width: 300px;   /* Tamanho máximo para o avatar */
-    margin: 0 auto;
+    width: 80%;
+    max-width: 300px; /* Tamanho máximo do avatar */
+    margin: 0 auto 20px; /* Espaço acima ou abaixo se necessário */
   }
   
   .avatar img {
     width: 100%;
     height: auto;
   }
+}
