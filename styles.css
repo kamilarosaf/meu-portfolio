@@ -7,9 +7,9 @@
 
 html, body {
     height: 100%; /* Garante que o corpo ocupe toda a altura */
-    overflow: hidden; /* Remove as barras de rolagem */
-    background-color: #232220; /* Cor de fundo conforme solicitado */
-    color: #ffffff; /* Texto em branco para contraste */
+    overflow: hidden; /* Remove barras de rolagem */
+    background-color: #232220; /* Cor de fundo */
+    color: #ffffff;
 }
 
 header {
@@ -56,7 +56,7 @@ nav ul li a.active, nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%; /* Ocupa toda a altura da página */
+    height: 100%; /* Ocupa toda a altura da tela */
     padding: 5%;
 }
 
@@ -116,12 +116,14 @@ h2 {
 .avatar {
     position: absolute; /* Posiciona o avatar */
     right: 3cm; /* Afastamento de 3 cm da borda direita */
-    bottom: 3cm; /* Afastamento de 3 cm da borda inferior */
-    height: 50%; /* Ocupa metade da altura da página */
-    width: auto; /* Mantém a largura proporcional à altura */
+    bottom: 0; /* Começa do rodapé */
+    height: 50%; /* Define a altura proporcional */
+    width: auto; /* Mantém a largura proporcional */
 }
 
 .avatar img {
     height: 100%;
     object-fit: cover; /* Ajusta a proporção da imagem */
+    border-radius: 50%; /* Deixa circular */
+    border: 5px solid #00ff7f; /* Borda verde */
 }
