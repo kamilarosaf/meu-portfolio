@@ -19,32 +19,35 @@ header {
   padding: 15px 5%;
   background: #1c1c1c;
   display: flex;
-  flex-direction: column; /* Modificado para empilhar logo e menu verticalmente */
-  align-items: flex-start;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  flex-direction: column; /* Empilha logo e menu na vertical */
+  align-items: flex-start; /* Alinha os itens à esquerda */
   position: fixed; /* Fixa o cabeçalho no topo */
   top: 0;
   left: 0;
   z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
   color: #ffffff;
-  margin-bottom: 10px; /* Espaço entre o logo e o menu */
+  margin-bottom: 5px; /* Espaço entre a logo e o menu */
 }
 
 nav {
-  width: auto;
+  width: 100%;
 }
 
 nav ul {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap; /* Permite quebrar linhas para responsividade */
-  gap: 10px; /* Espaço entre itens do menu */
+  display: flex; /* Alinha os itens do menu horizontalmente */
   padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin-right: 20px; /* Espaço entre os itens do menu */
 }
 
 nav ul li a {
