@@ -11,6 +11,7 @@ body {
     color: #f1f1f1;
     text-align: center;
     padding: 20px;
+    padding-top: 60px; /* Ajusta o espaço de 1cm para compensar o cabeçalho fixo */
 }
 
 /* Cabeçalho */
@@ -66,7 +67,6 @@ nav ul li a:hover {
 
 /* Seção sobre */
 .sobre {
-  margin-top: 60px; /* Espaço de 1cm (aproximadamente 60px) entre o cabeçalho e a seção */
   padding: 20px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
