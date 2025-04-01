@@ -24,7 +24,8 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  z-index: 1000;
 }
 
 .logo {
@@ -33,9 +34,15 @@ header {
   color: #ffffff;
 }
 
+nav {
+  flex-grow: 1;
+  text-align: right;
+}
+
 nav ul {
   list-style: none;
   display: flex;
+  justify-content: flex-end;
 }
 
 nav ul li {
@@ -60,9 +67,9 @@ nav ul li a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   padding: 5%;
-  padding-top: 80px; /* Compensação para o header fixo */
+  padding-top: 100px; /* Compensação para o header fixo */
 }
 
 .content {
@@ -140,7 +147,7 @@ h2 {
     flex-direction: column;
     text-align: center;
     padding: 5% 10%;
-    padding-top: 100px; /* Ajuste para evitar sobreposição do header */
+    padding-top: 120px; /* Ajuste para evitar sobreposição do header */
   }
 
   .content {
@@ -154,12 +161,28 @@ h2 {
 }
 
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    display: block;
+  }
+  
+  nav ul li {
+    margin: 10px 0;
+  }
+  
   .avatar {
     max-width: 80%;
   }
 
   .home {
     padding: 20px;
-    padding-top: 120px; /* Ajuste adicional para evitar sobreposição */
+    padding-top: 140px; /* Ajuste adicional para evitar sobreposição */
   }
 }
