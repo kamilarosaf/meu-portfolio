@@ -66,7 +66,7 @@ nav ul li a:hover {
 
 /* Seção sobre */
 .sobre {
-  margin-top: 40px; /* Espaço de 1cm (aproximadamente 40px) do header para a seção sobre */
+  margin-top: 60px; /* Espaço de 1cm (aproximadamente 60px) entre o cabeçalho e a seção */
   padding: 20px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
