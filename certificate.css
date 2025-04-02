@@ -53,7 +53,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #00ff7f;
+  color: #ffffff;
   font-weight: bold;
   padding: 8px 12px;
   transition: color 0.3s;
@@ -66,12 +66,12 @@ nav ul li a:hover {
 
 /* Espaço para o cabeçalho fixo */
 .header-space {
-  height: 80px; /* Altura do cabeçalho fixo */
+  height: 100px; /* Aumentando a altura para garantir mais espaço */
 }
 
 /* Certificados */
 .certificates {
-  margin-top: 120px; /* Compensa a altura do cabeçalho fixo */
+  margin-top: 150px; /* Aumentando a margem para compensar ainda mais a altura do cabeçalho fixo */
   padding: 20px;
 }
 
@@ -153,4 +153,9 @@ nav ul li a:hover {
   .certificate {
     margin-bottom: 20px;
   }
+
+  .certificates {
+    margin-top: 180px; /* Ajuste maior para dispositivos móveis */
+  }
 }
+
