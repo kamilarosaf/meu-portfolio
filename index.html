@@ -7,6 +7,93 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="icon" href="images/icon.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #000;
+        }
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .home {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            padding: 20px;
+        }
+        .home h1 {
+            font-size: 1.8em;
+        }
+        .home h2 {
+            font-size: 1.4em;
+            color: orange;
+        }
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: limegreen;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: darkgreen;
+            color: white;
+        }
+        .social-icons {
+            margin-top: 15px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+            font-size: 1.5em;
+        }
+        .avatar img {
+            max-width: 150px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .home {
+                height: auto;
+            }
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -27,8 +114,7 @@
         <h1>Olá 👋 Eu sou a <span>Kamila Rosa</span></h1>
         <h2>Estudante de <span class="typing">Gestão em TI</span></h2>
         <a href="about.html" class="btn">Sobre mim</a>
-        <!-- Botão de Download do CV -->
-        <a href="cv-kamila-rosa.pdf" download class="btn download-btn">Baixe meu CV</a>
+        <a href="cv-kamila-rosa.pdf" download class="btn">Baixe meu CV</a>
         <div class="social-icons">
             <a href="https://www.linkedin.com/in/kamila-rosa-15a818309/" target="_blank">
                 <i class="fab fa-linkedin"></i>
@@ -39,13 +125,9 @@
         </div>
     </div>
     <div class="avatar">
-        <!-- Avatar ajustado para novo design -->
         <img src="images/perfil.git.png" alt="Avatar">
     </div>
 </section>
-
-<footer>
-</footer>
 
 <script src="script.js"></script>
 </body>
