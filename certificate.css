@@ -1,3 +1,69 @@
+/* Estilos Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #232220;
+  color: #ffffff;
+  overflow: hidden; /* Remove rolagem padrão */
+}
+
+header {
+  width: 100%;
+  padding: 15px 5%;
+  background: #1c1c1c;
+  display: flex;
+  flex-direction: column; /* Empilha logo e menu na vertical */
+  align-items: flex-start; /* Alinha os itens à esquerda */
+  position: fixed; /* Fixa o cabeçalho no topo */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 5px; /* Espaço entre a logo e o menu */
+  align-self: flex-start; /* Garante que a logo fique no canto esquerdo */
+}
+
+nav {
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex; /* Alinha os itens do menu horizontalmente */
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin-right: 20px; /* Espaço entre os itens do menu */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: color 0.3s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  color: #00ff7f;
+}
+
 /* Certificados */
 .certificates {
     margin-top: 40px;
