@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,40 +8,57 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="icon" href="images/icon.png" type="image/png">
     <style>
-        @media (max-width: 600px) {
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        .home {
+            text-align: center;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
             body {
-                text-align: center;
-                padding: 10px;
-            }
-            header {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 10px;
-            }
-            nav ul {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 0;
+                height: auto;
+                overflow: auto;
             }
             .home {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                height: auto;
                 padding: 20px;
             }
-            .btn {
-                width: 100%;
-                max-width: 250px;
-                display: block;
-                margin: 10px auto;
-            }
-            .avatar img {
-                max-width: 120px;
-                margin-top: 20px;
+            .social-icons a {
+                font-size: 20px;
             }
         }
     </style>
@@ -65,7 +82,7 @@
         <h1>Olá 👋 Eu sou a <span>Kamila Rosa</span></h1>
         <h2>Estudante de <span class="typing">Gestão em TI</span></h2>
         <a href="about.html" class="btn">Sobre mim</a>
-        <a href="cv-kamila-rosa.pdf" download class="btn">Baixe meu CV</a>
+        <a href="cv-kamila-rosa.pdf" download class="btn download-btn">Baixe meu CV</a>
         <div class="social-icons">
             <a href="https://www.linkedin.com/in/kamila-rosa-15a818309/" target="_blank">
                 <i class="fab fa-linkedin"></i>
@@ -80,6 +97,8 @@
     </div>
 </section>
 
+<footer>
+</footer>
 <script src="script.js"></script>
 </body>
 </html>
