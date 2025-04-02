@@ -238,3 +238,90 @@ h2 {
     margin-right: 10px;
   }
 }
+/* Espaçamento para evitar sobreposição do header */
+.header-space {
+  height: 100px; /* Espaço extra para compensar o header */
+}
+
+/* Ajuste da seção Home */
+.home {
+  margin-top: 120px; /* Adiciona mais margem para evitar sobreposição */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto; /* Garante ajuste automático da altura */
+  padding: 20px 10%;
+  flex-wrap: wrap; /* Permite elementos se ajustarem bem */
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .header-space {
+    height: 120px; /* Ajusta compensação do cabeçalho para tablets */
+  }
+
+  .home {
+    margin-top: 140px; /* Compensa o cabeçalho maior */
+    padding: 20px 5%; /* Reduz o espaçamento lateral */
+  }
+
+  .content {
+    text-align: center; /* Centraliza o texto */
+    max-width: 100%; /* Usa 100% da largura disponível */
+  }
+
+  .avatar {
+    max-width: 60%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-space {
+    height: 140px; /* Ajusta mais espaço no mobile */
+  }
+
+  .home {
+    margin-top: 160px; /* Compensa a sobreposição em telas menores */
+    padding: 30px 5%; /* Mais espaçamento geral para o conteúdo */
+  }
+
+  .content {
+    text-align: center;
+    max-width: 90%; /* Usa 90% da largura para evitar bordas */
+  }
+
+  .avatar {
+    max-width: 70%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-space {
+    height: 160px; /* Altura maior para cabeçalho */
+  }
+
+  .home {
+    margin-top: 180px; /* Espaçamento maior para telas pequenas */
+    padding: 40px 5%; /* Mais espaçamento superior */
+  }
+
+  .content h1 {
+    font-size: 28px; /* Texto principal menor */
+  }
+
+  .content h2 {
+    font-size: 20px; /* Subtítulo ajustado */
+  }
+
+  .avatar {
+    max-width: 80%;
+    margin-top: 15px; /* Ajuste da margem superior */
+  }
+
+  .btn {
+    font-size: 14px; /* Botões menores */
+    padding: 10px 16px;
+  }
+}
