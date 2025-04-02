@@ -47,7 +47,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #ffffff;
+  color: #00ff7f;
   font-weight: bold;
   padding: 8px 12px;
   transition: color 0.3s;
@@ -232,5 +232,43 @@ h2 {
   .social-icons a {
     font-size: 20px;
     margin-right: 10px;
+  }
+}
+/* Ajuste para evitar sobreposição do header */
+.header-space {
+  height: 100px; /* Aumentado para garantir espaço suficiente */
+}
+
+/* Seção Home */
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100vh - 100px); /* Considera o header fixo */
+  padding: 0 10%;
+  margin-top: 100px; /* Ajusta para compensar o cabeçalho */
+}
+
+@media (max-width: 768px) {
+  .header-space {
+    height: 120px; /* Maior compensação para telas menores */
+  }
+
+  .home {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 5%;
+    margin-top: 120px; /* Ajustado para compensar o cabeçalho */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-space {
+    height: 140px; /* Ajuste para celulares pequenos */
+  }
+
+  .home {
+    margin-top: 140px; /* Compensa a altura do cabeçalho */
   }
 }
