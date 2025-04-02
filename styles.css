@@ -110,22 +110,22 @@ h2 {
   color: #00ff7f;
 }
 
-/* Ícones sociais - LinkedIn & GitHub */
 .social-icons {
-  margin-top: 15px;
   display: flex;
+  justify-content: flex-start; /* Alinha à esquerda; altere para 'center' se quiser centralizado */
+  gap: 15px; /* Espaço entre os ícones */
+  margin-top: 20px;
 }
 
 .social-icons a {
-  color: #ffffff;
-  font-size: 24px;
-  margin-right: 15px;
   text-decoration: none;
-  transition: color 0.3s;
+  color: #ffffff; /* Cor padrão dos ícones */
+  font-size: 24px; /* Tamanho do ícone */
+  transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #00ff7f;
+  color: #00ff7f; /* Cor ao passar o mouse */
 }
 
 /* Avatar */
