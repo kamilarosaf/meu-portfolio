@@ -1,197 +1,4 @@
-/* Estilos Globais */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}
-
-html,
-body {
-  height: 100%;
-  background-color: #232220;
-  color: #ffffff;
-  overflow: hidden; /* Remove rolagem padrão */
-}
-
-header {
-  width: 100%;
-  padding: 15px 5%;
-  background: #1c1c1c;
-  display: flex;
-  flex-direction: column; /* Empilha logo e menu na vertical */
-  align-items: flex-start; /* Alinha os itens à esquerda */
-  position: fixed; /* Fixa o cabeçalho no topo */
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #ffffff;
-  margin-bottom: 5px; /* Espaço entre a logo e o menu */
-  align-self: flex-start; /* Garante que a logo fique no canto esquerdo */
-}
-
-nav {
-  width: 100%;
-}
-
-nav ul {
-  list-style: none;
-  display: flex; /* Alinha os itens do menu horizontalmente */
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li {
-  margin-right: 20px; /* Espaço entre os itens do menu */
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: bold;
-  padding: 8px 12px;
-  transition: color 0.3s;
-}
-
-nav ul li a.active,
-nav ul li a:hover {
-  color: #00ff7f;
-}
-
-/* Seção Home e Conteúdo */
-.home {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  padding: 0 10%;
-  margin-top: 80px; /* Compensa altura do header fixo */
-}
-
-.content {
-  max-width: 50%;
-  text-align: left;
-}
-
-h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
-  text-align: left;
-}
-
-.name {
-  color: #00ff7f;
-}
-
-h2 {
-  font-size: 24px;
-  color: #ffa500;
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #00ff7f;
-  color: #121212;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: #ffffff;
-  color: #00ff7f;
-}
-
-.social-icons {
-  margin-top: 15px;
-  display: flex;
-}
-
-.social-icons a {
-  color: #ffffff;
-  font-size: 20px;
-  margin-right: 15px;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.social-icons a:hover {
-  color: #00ff7f;
-}
-
-/* Avatar - Centralizado à direita */
-.avatar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 40%;
-}
-
-.avatar img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  border: 5px solid #00ff7f;
-}
-
-/* Responsividade */
-@media (max-width: 1024px) {
-  .home {
-    flex-direction: column; /* Empilha conteúdo para evitar sobreposição */
-    align-items: center;
-    padding: 0 5%;
-    margin-top: 120px; /* Ajusta para mobile */
-  }
-
-  .content {
-    max-width: 100%;
-    text-align: center; /* Centraliza texto */
-  }
-
-  .avatar {
-    max-width: 60%; /* Avatar menor para dispositivos menores */
-    margin-top: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    padding: 10px 3%;
-  }
-
-  nav ul {
-    gap: 8px; /* Espaçamento menor para itens do menu */
-  }
-
-  .home {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0 5%;
-    margin-top: 120px; /* Ajuste final para garantir visibilidade */
-  }
-
-  .content {
-    text-align: center; /* Texto alinhado ao centro */
-  }
-
-  .avatar {
-    max-width: 80%;
-    margin: 20px auto; /* Centraliza o avatar */
-  }
-}
-/* Configuração Padrão */
+/* Configuração padrão */
 * {
     margin: 0;
     padding: 0;
@@ -203,140 +10,166 @@ body {
     background: linear-gradient(135deg, #121212, #232220);
     color: #f1f1f1;
     text-align: center;
-    padding: 20px;
 }
 
 /* Cabeçalho */
 header {
-    background: #1c1c1c;
-    color: #f1f1f1;
-    padding: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  padding: 15px 5%;
+  background: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-header .logo {
-    font-size: 24px;
-    font-weight: bold;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+nav {
+  width: 100%;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #00ff7f;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+  text-decoration: none;
+  color: #00ff7f;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: color 0.3s;
 }
 
+nav ul li a.active,
 nav ul li a:hover {
-    background-color: #00ff7f;
-    color: #121212;
-    box-shadow: 0px 0px 15px #00ff7f;
+  color: #00ff7f;
 }
 
-/* Certificados */
-.certificates {
-    margin-top: 40px;
+/* Espaço para o cabeçalho fixo */
+.header-space {
+    height: 70px; /* Ajuste a altura de acordo com o cabeçalho */
 }
 
-.certificates h2 {
-    font-size: 2rem;
-    color: #00ff7f;
+/* Seção de conteúdo */
+.home {
+    margin-top: 70px; /* Espaço para não sobrepor o cabeçalho */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.content h1 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
-    text-shadow: 0px 0px 10px #00ff7f;
 }
 
-.certificates p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    color: #f1f1f1;
+.content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
-/* Container de Certificados */
-.certificate-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.certificate {
-    background: #1c1c1c;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.certificate:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 20px rgba(0, 255, 127, 0.5);
-}
-
-.certificate figure img {
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-.certificate h3 {
-    font-size: 1.2rem;
+.content h1 span, .content h2 span {
     color: #00ff7f;
-    margin: 15px 0 10px;
 }
 
-.certificate p {
-    font-size: 1rem;
-    color: #dcdcdc;
-    margin-bottom: 15px;
-}
-
-.certificate a {
-    display: inline-block;
-    padding: 10px 15px;
-    background: #00ff7f;
-    color: #121212;
+.btn {
     text-decoration: none;
+    padding: 10px 20px;
+    background-color: #00ff7f;
+    color: black;
+    border-radius: 8px;
+    margin: 10px;
     font-weight: bold;
-    border-radius: 6px;
     transition: all 0.3s ease;
 }
 
-.certificate a:hover {
-    background: #ffffff;
+.btn:hover {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #00ff7f;
+    box-shadow: 0 0 20px #00ff7f;
+    transform: scale(1.05);
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
     color: #00ff7f;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
 }
 
-/* Rodapé */
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #1c1c1c;
-    color: #f1f1f1;
-    border-top: 3px solid #00ff7f;
-    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3);
+.social-icons a:hover {
+    color: #ffffff;
 }
 
-/* Responsividade */
+/* Avatar */
+.avatar img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+/* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
-    .certificate-container {
-        grid-template-columns: 1fr;
+    .home {
+        margin-top: 120px; /* Ajuste do espaço superior para o cabeçalho fixo */
     }
 
-    .certificate {
-        margin-bottom: 20px;
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content h2 {
+        font-size: 1.2rem;
+    }
+
+    .avatar img {
+        width: 150px; /* Ajuste o tamanho da imagem para dispositivos menores */
+    }
+
+    .social-icons a {
+        font-size: 20px; /* Reduzir o tamanho dos ícones sociais */
+    }
+
+    header {
+        padding: 10px 5%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
     }
 }
