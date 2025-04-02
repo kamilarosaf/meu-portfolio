@@ -53,7 +53,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #ffffff;
+  color: #00ff7f;
   font-weight: bold;
   padding: 8px 12px;
   transition: color 0.3s;
@@ -71,7 +71,7 @@ nav ul li a:hover {
 
 /* Certificados */
 .certificates {
-  margin-top: 150px; /* Aumentando a margem para compensar ainda mais a altura do cabeçalho fixo */
+  margin-top: 120px; /* Aumentando a margem para compensar ainda mais a altura do cabeçalho fixo */
   padding: 20px;
 }
 
