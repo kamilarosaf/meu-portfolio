@@ -325,56 +325,56 @@ h2 {
     padding: 10px 16px;
   }
 }
-/* Ajustes globais */
+/* Ajuste do Avatar */
 .avatar {
   max-width: 40%;
-  width: auto; /* Permite que o avatar se ajuste à largura disponível */
+  width: 100%; /* Garante que ocupe todo o espaço disponível */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .avatar img {
-  width: 100%; /* Ajusta automaticamente para o contêiner */
+  width: 100%;
   height: auto;
   border-radius: 50%;
   border: 5px solid #00ff7f;
-  object-fit: contain; /* Garante que a imagem não fique cortada */
+  object-fit: contain; /* Certifica que toda a imagem seja visível */
+  max-height: 400px; /* Limita a altura máxima para evitar cortes */
 }
 
 /* Responsividade para telas menores */
 @media (max-width: 1024px) {
   .avatar {
-    max-width: 50%; /* Ajuste flexível para telas menores */
+    max-width: 60%; /* Expande o avatar para telas menores */
     margin-top: 20px;
   }
 
   .avatar img {
-    object-fit: cover; /* Mantém o foco na imagem sem distorcer */
+    max-height: 300px; /* Reduz altura para telas menores */
   }
 }
 
 @media (max-width: 768px) {
   .avatar {
-    max-width: 70%; /* Ampla para dispositivos menores */
-    margin-top: 10px;
+    max-width: 70%;
+    margin-top: 15px;
   }
 
   .avatar img {
-    width: auto; /* Ajuste dinâmico */
-    max-height: 300px; /* Limite para evitar corte excessivo */
+    max-height: 250px; /* Ajuste mais específico para telas pequenas */
   }
 }
 
 @media (max-width: 480px) {
   .avatar {
-    max-width: 80%; /* Mais espaço para o avatar */
-    margin-top: 15px;
+    max-width: 80%;
+    margin-top: 20px;
   }
 
   .avatar img {
-    width: 100%;
-    max-height: 200px; /* Limita a altura em telas menores */
+    width: auto;
+    max-height: 200px; /* Mantém a proporção correta sem cortes */
+    object-fit: cover; /* Melhora o ajuste visual */
   }
 }
-
