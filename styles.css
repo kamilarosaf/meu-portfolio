@@ -110,22 +110,40 @@ h2 {
   color: #00ff7f;
 }
 
-.social-icons {
+.social-buttons {
   display: flex;
-  justify-content: flex-start; /* Alinha à esquerda; altere para 'center' se quiser centralizado */
-  gap: 15px; /* Espaço entre os ícones */
+  justify-content: center; /* Centraliza os botões */
+  gap: 20px; /* Espaçamento entre os botões */
   margin-top: 20px;
 }
 
-.social-icons a {
-  text-decoration: none;
-  color: #ffffff; /* Cor padrão dos ícones */
-  font-size: 24px; /* Tamanho do ícone */
-  transition: color 0.3s ease;
+.social-buttons .btn {
+  display: inline-block;
+  padding: 12px 20px; /* Tamanho do botão */
+  font-weight: bold;
+  border-radius: 5px; /* Bordas arredondadas */
+  text-decoration: none; /* Remove sublinhado */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.social-icons a:hover {
-  color: #00ff7f; /* Cor ao passar o mouse */
+.linkedin-btn {
+  background: #0e76a8; /* Cor do LinkedIn */
+  color: #ffffff; /* Texto branco */
+}
+
+.linkedin-btn:hover {
+  background: #005083; /* Cor ao passar o mouse */
+  color: #f1f1f1;
+}
+
+.github-btn {
+  background: #333333; /* Cor do GitHub */
+  color: #ffffff; /* Texto branco */
+}
+
+.github-btn:hover {
+  background: #24292e; /* Cor ao passar o mouse */
+  color: #f1f1f1;
 }
 
 /* Avatar */
