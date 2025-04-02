@@ -77,66 +77,10 @@ nav ul li a:hover {
   align-items: center;
   height: 100vh;
   padding: 0 10%;
-  margin-top: 80px; /* Compensa altura do header fixo */
+  margin-top: 100px; /* Ajustado para evitar sobreposição do header */
 }
 
-.content {
-  max-width: 50%;
-  text-align: left;
-}
-
-h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
-  text-align: left;
-}
-
-.name {
-  color: #00ff7f;
-}
-
-h2 {
-  font-size: 24px;
-  color: #ffa500;
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #00ff7f;
-  color: #121212;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: #ffffff;
-  color: #00ff7f;
-}
-
-.social-icons {
-  margin-top: 15px;
-  display: flex;
-}
-
-.social-icons a {
-  color: #ffffff;
-  font-size: 20px;
-  margin-right: 15px;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.social-icons a:hover {
-  color: #00ff7f;
-}
-
-/* Avatar - Centralizado à direita */
+/* Corrigindo a posição da imagem */
 .avatar {
   display: flex;
   justify-content: center;
@@ -149,6 +93,26 @@ h2 {
   height: auto;
   border-radius: 50%;
   border: 5px solid #00ff7f;
+  margin-top: 20px; /* Ajustado para não ficar muito abaixo */
+}
+
+/* Ícones sociais */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Centraliza os ícones */
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 24px;
+  margin-right: 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00ff7f; /* Destaque ao passar o mouse */
 }
 
 /* Responsividade */
@@ -157,17 +121,17 @@ h2 {
     flex-direction: column;
     align-items: center;
     padding: 0 5%;
-    margin-top: 120px; /* Ajusta para mobile */
+    margin-top: 120px; /* Ajuste para telas menores */
   }
 
   .content {
     max-width: 100%;
-    text-align: center; /* Centraliza texto */
+    text-align: center;
   }
 
   .avatar {
-    max-width: 60%; /* Avatar menor para dispositivos menores */
-    margin-top: 20px;
+    max-width: 60%;
+    margin-top: 10px; /* Aproxima a imagem do texto */
   }
 }
 
@@ -177,8 +141,8 @@ h2 {
   }
 
   nav ul {
-    gap: 8px; /* Espaçamento menor para itens do menu */
-    flex-direction: column; /* Menu em coluna para telas menores */
+    flex-direction: column;
+    gap: 8px;
   }
 
   .home {
@@ -186,137 +150,25 @@ h2 {
     align-items: center;
     text-align: center;
     padding: 0 5%;
-    margin-top: 120px; /* Ajuste final para garantir visibilidade */
-  }
-
-  .content {
-    text-align: center; /* Texto alinhado ao centro */
+    margin-top: 120px;
   }
 
   .avatar {
     max-width: 80%;
-    margin: 20px auto; /* Centraliza o avatar */
+    margin-top: 10px; /* Aproxima mais do texto */
   }
 }
 
-/* Para dispositivos móveis menores */
 @media (max-width: 480px) {
   .home {
-    margin-top: 140px; /* Ajuste maior para compensar o cabeçalho fixo */
-  }
-
-  .content h1 {
-    font-size: 28px;
-  }
-
-  .content h2 {
-    font-size: 20px;
+    margin-top: 140px;
   }
 
   .avatar img {
-    width: 100px; /* Ajusta o avatar para telas menores */
+    width: 100px;
   }
 
   .social-icons a {
     font-size: 18px;
   }
 }
-/* Dispositivos menores que 1024px */
-@media (max-width: 1024px) {
-  .home {
-    flex-direction: column; /* Organiza os elementos verticalmente */
-    align-items: center;
-    padding: 0 5%; /* Reduz o espaçamento lateral */
-    margin-top: 120px; /* Compensa o cabeçalho fixo */
-  }
-
-  .content {
-    max-width: 100%; /* Garante que o texto não ultrapasse os limites da tela */
-    text-align: center; /* Centraliza o texto */
-    margin-bottom: 20px; /* Espaço entre o conteúdo e o avatar */
-  }
-
-  .avatar {
-    max-width: 60%; /* Ajusta o tamanho do avatar */
-    margin-top: 20px; /* Espaço adicional para separação */
-  }
-}
-
-/* Dispositivos menores que 768px */
-@media (max-width: 768px) {
-  header {
-    padding: 10px 3%; /* Reduz o espaçamento lateral no cabeçalho */
-  }
-
-  nav ul {
-    flex-direction: column; /* Empilha os itens do menu verticalmente */
-    gap: 8px; /* Espaçamento menor para itens do menu */
-  }
-
-  .home {
-    flex-direction: column; /* Mantém a organização vertical */
-    align-items: center;
-    text-align: center; /* Centraliza o texto */
-    padding: 0 5%;
-    margin-top: 120px; /* Ajuste para visibilidade completa */
-  }
-
-  .content h1 {
-    font-size: 32px; /* Reduz o tamanho do texto principal */
-  }
-
-  .content h2 {
-    font-size: 20px; /* Ajusta o tamanho do subtítulo */
-    margin-bottom: 15px;
-  }
-
-  .avatar {
-    max-width: 80%; /* Reduz o tamanho do avatar para telas menores */
-    margin: 20px auto; /* Centraliza o avatar */
-  }
-
-  .social-icons a {
-    font-size: 18px; /* Tamanho menor dos ícones sociais */
-  }
-}
-
-/* Dispositivos menores que 480px */
-@media (max-width: 480px) {
-  .home {
-    margin-top: 140px; /* Maior compensação para o cabeçalho fixo */
-  }
-
-  .content h1 {
-    font-size: 28px; /* Texto principal mais compacto */
-  }
-
-  .content h2 {
-    font-size: 18px; /* Ajusta o tamanho do subtítulo */
-  }
-
-  .avatar img {
-    width: 100px; /* Reduz o tamanho do avatar */
-  }
-
-  .btn {
-    font-size: 14px; /* Ajusta o tamanho do texto nos botões */
-    padding: 8px 16px; /* Reduz o tamanho dos botões */
-  }
-
-  .social-icons a {
-    font-size: 16px; /* Ícones sociais menores */
-    margin-right: 10px; /* Espaçamento reduzido entre ícones */
-  }
-}
-.social-icons a {
-    color: #ffffff;
-    font-size: 24px; /* Tamanho do ícone */
-    margin-right: 15px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: #00ff7f; /* Destaque ao passar o mouse */
-}
-
