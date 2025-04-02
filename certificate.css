@@ -13,14 +13,15 @@ body {
   color: #ffffff;
 }
 
+/* Cabeçalho fixo */
 header {
   width: 100%;
   padding: 15px 5%;
   background: #1c1c1c;
   display: flex;
-  flex-direction: column; /* Empilha logo e menu na vertical */
-  align-items: flex-start; /* Alinha os itens à esquerda */
-  position: fixed; /* Fixa o cabeçalho no topo */
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -31,8 +32,8 @@ header {
   font-size: 24px;
   font-weight: bold;
   color: #ffffff;
-  margin-bottom: 5px; /* Espaço entre a logo e o menu */
-  align-self: flex-start; /* Garante que a logo fique no canto esquerdo */
+  margin-bottom: 5px;
+  align-self: flex-start;
 }
 
 nav {
@@ -41,13 +42,13 @@ nav {
 
 nav ul {
   list-style: none;
-  display: flex; /* Alinha os itens do menu horizontalmente */
+  display: flex;
   padding: 0;
   margin: 0;
 }
 
 nav ul li {
-  margin-right: 20px; /* Espaço entre os itens do menu */
+  margin-right: 20px;
 }
 
 nav ul li a {
@@ -63,76 +64,93 @@ nav ul li a:hover {
   color: #00ff7f;
 }
 
+/* Espaço para o cabeçalho fixo */
+.header-space {
+  height: 80px; /* Altura do cabeçalho fixo */
+}
+
 /* Certificados */
 .certificates {
-    margin-top: 40px;
+  margin-top: 120px; /* Compensa a altura do cabeçalho fixo */
+  padding: 20px;
 }
 
 .certificates h2 {
-    font-size: 2rem;
-    color: #00ff7f;
-    margin-bottom: 20px;
-    text-shadow: 0px 0px 10px #00ff7f;
+  font-size: 2rem;
+  color: #00ff7f;
+  margin-bottom: 20px;
+  text-shadow: 0px 0px 10px #00ff7f;
 }
 
 .certificates p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    color: #f1f1f1;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #f1f1f1;
 }
 
 /* Container de Certificados */
 .certificate-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .certificate {
-    background: #1c1c1c;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #1c1c1c;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .certificate:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 20px rgba(0, 255, 127, 0.5);
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px rgba(0, 255, 127, 0.5);
 }
 
 .certificate figure img {
-    max-width: 100%;
-    border-radius: 8px;
+  max-width: 100%;
+  border-radius: 8px;
 }
 
 .certificate h3 {
-    font-size: 1.2rem;
-    color: #00ff7f;
-    margin: 15px 0 10px;
+  font-size: 1.2rem;
+  color: #00ff7f;
+  margin: 15px 0 10px;
 }
 
 .certificate p {
-    font-size: 1rem;
-    color: #dcdcdc;
-    margin-bottom: 15px;
+  font-size: 1rem;
+  color: #dcdcdc;
+  margin-bottom: 15px;
 }
 
 .certificate a {
-    display: inline-block;
-    padding: 10px 15px;
-    background: #00ff7f;
-    color: #121212;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
-    transition: all 0.3s ease;
+  display: inline-block;
+  padding: 10px 15px;
+  background: #00ff7f;
+  color: #121212;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
 .certificate a:hover {
-    background: #ffffff;
-    color: #00ff7f;
+  background: #ffffff;
+  color: #00ff7f;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .certificate-container {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate {
+    margin-bottom: 20px;
+  }
 }
