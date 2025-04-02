@@ -308,3 +308,15 @@ h2 {
     margin-right: 10px; /* Espaçamento reduzido entre ícones */
   }
 }
+.social-icons a {
+    color: #ffffff;
+    font-size: 24px; /* Tamanho do ícone */
+    margin-right: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #00ff7f; /* Destaque ao passar o mouse */
+}
+
