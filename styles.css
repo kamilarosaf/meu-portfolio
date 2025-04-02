@@ -221,3 +221,90 @@ h2 {
     font-size: 18px;
   }
 }
+/* Dispositivos menores que 1024px */
+@media (max-width: 1024px) {
+  .home {
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    align-items: center;
+    padding: 0 5%; /* Reduz o espaçamento lateral */
+    margin-top: 120px; /* Compensa o cabeçalho fixo */
+  }
+
+  .content {
+    max-width: 100%; /* Garante que o texto não ultrapasse os limites da tela */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaço entre o conteúdo e o avatar */
+  }
+
+  .avatar {
+    max-width: 60%; /* Ajusta o tamanho do avatar */
+    margin-top: 20px; /* Espaço adicional para separação */
+  }
+}
+
+/* Dispositivos menores que 768px */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 3%; /* Reduz o espaçamento lateral no cabeçalho */
+  }
+
+  nav ul {
+    flex-direction: column; /* Empilha os itens do menu verticalmente */
+    gap: 8px; /* Espaçamento menor para itens do menu */
+  }
+
+  .home {
+    flex-direction: column; /* Mantém a organização vertical */
+    align-items: center;
+    text-align: center; /* Centraliza o texto */
+    padding: 0 5%;
+    margin-top: 120px; /* Ajuste para visibilidade completa */
+  }
+
+  .content h1 {
+    font-size: 32px; /* Reduz o tamanho do texto principal */
+  }
+
+  .content h2 {
+    font-size: 20px; /* Ajusta o tamanho do subtítulo */
+    margin-bottom: 15px;
+  }
+
+  .avatar {
+    max-width: 80%; /* Reduz o tamanho do avatar para telas menores */
+    margin: 20px auto; /* Centraliza o avatar */
+  }
+
+  .social-icons a {
+    font-size: 18px; /* Tamanho menor dos ícones sociais */
+  }
+}
+
+/* Dispositivos menores que 480px */
+@media (max-width: 480px) {
+  .home {
+    margin-top: 140px; /* Maior compensação para o cabeçalho fixo */
+  }
+
+  .content h1 {
+    font-size: 28px; /* Texto principal mais compacto */
+  }
+
+  .content h2 {
+    font-size: 18px; /* Ajusta o tamanho do subtítulo */
+  }
+
+  .avatar img {
+    width: 100px; /* Reduz o tamanho do avatar */
+  }
+
+  .btn {
+    font-size: 14px; /* Ajusta o tamanho do texto nos botões */
+    padding: 8px 16px; /* Reduz o tamanho dos botões */
+  }
+
+  .social-icons a {
+    font-size: 16px; /* Ícones sociais menores */
+    margin-right: 10px; /* Espaçamento reduzido entre ícones */
+  }
+}
