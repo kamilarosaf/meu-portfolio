@@ -63,7 +63,7 @@ Feito com 💚 por Kamila Rosa
 
 📜 Certificada AWS Cloud Practitioner
 
-📫 LinkedIn
+📫 [LinkedIn](https://www.linkedin.com/in/kamila-rosa-15a818309/)
 
 ## 📄 Licença
 Este projeto está licenciado sob a MIT License.
