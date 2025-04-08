@@ -28,7 +28,7 @@ Acesse online: [kamilarosaf.github.io/meu-portfolio](https://kamilarosaf.github.
 ## 📸 Captura de tela
 
 
-![screenshot](images/meu-portifolio.png)
+![screenshot](images/meu-portifolio.JPG)
 
 ---
 
